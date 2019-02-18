@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="656.0" prefWidth="1123.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universitydatabasemanagement.LibraryManagementController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="666.0" prefWidth="302.0" style="-fx-background-color: #0d3e48;">
+         <children>
+            <Label layoutX="6.0" layoutY="2.0" prefHeight="27.0" prefWidth="154.0" text="Librarian Manager" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="34.0" text="Librarian ID" textFill="WHITE" />
+            <TextField fx:id="librarian_id_text_1_LM" layoutX="73.0" layoutY="30.0" prefHeight="25.0" prefWidth="212.0" promptText="Librarian ID" style="-fx-background-radius: 3em;" />
+            <Label layoutX="6.0" layoutY="62.0" text="Librarian Name" textFill="WHITE" />
+            <TextField fx:id="librarian_name_text_1_LM" layoutX="93.0" layoutY="58.0" prefHeight="25.0" prefWidth="192.0" promptText="Librarian Name" style="-fx-background-radius: 3em;" />
+            <Label layoutX="6.0" layoutY="91.0" text="Shift" textFill="WHITE" />
+            <ComboBox fx:id="librarian_shift_combo_1_LM" layoutX="47.0" layoutY="87.0" prefHeight="25.0" prefWidth="235.0" />
+            <Button fx:id="add_button_1_LM" layoutX="31.0" layoutY="119.0" mnemonicParsing="false" onAction="#add1LMButtonClickedListener" onMouseEntered="#Add1LMbuttonEntered" onMouseExited="#Add1LMbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Add" textFill="WHITE" />
+            <Button fx:id="clear_button_1_LM" layoutX="182.0" layoutY="119.0" mnemonicParsing="false" onAction="#clear1LMButtonClickedListener" onMouseEntered="#Clear1LMbuttonEntered" onMouseExited="#Clear1LMbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" />
+            <Line endX="206.0" layoutX="95.0" layoutY="155.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="6.0" layoutY="156.0" text="Book Insertion" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="187.0" text="Book ID" textFill="WHITE" />
+            <TextField fx:id="book_id_text_2_BI" layoutX="45.0" layoutY="183.0" prefHeight="25.0" prefWidth="235.0" promptText="Book ID" style="-fx-background-radius: 3em;" />
+            <Label layoutX="1.0" layoutY="215.0" text="Book Title" textFill="WHITE" />
+            <TextField fx:id="book_title_text_2_BI" layoutX="57.0" layoutY="211.0" prefHeight="25.0" prefWidth="223.0" promptText="Book Title" style="-fx-background-radius: 3em;" />
+            <Label layoutX="4.0" layoutY="244.0" prefHeight="17.0" prefWidth="53.0" text="Publisher" textFill="WHITE" />
+            <TextField fx:id="pubisher_text_2_BI" layoutX="57.0" layoutY="240.0" prefHeight="25.0" prefWidth="223.0" promptText="Publisher" style="-fx-background-radius: 3em;" />
+            <Label layoutX="5.0" layoutY="273.0" text="Author" textFill="WHITE" />
+            <TextField fx:id="author_text_2_BI" layoutX="45.0" layoutY="269.0" prefHeight="25.0" prefWidth="235.0" promptText="Author" style="-fx-background-radius: 3em;" />
+            <Label layoutX="5.0" layoutY="301.0" text="No. of Pieces" textFill="WHITE" />
+            <TextField fx:id="no_of_book_text_2_BI" layoutX="90.0" layoutY="297.0" prefHeight="25.0" prefWidth="184.0" promptText="No. of Book" style="-fx-background-radius: 3em;" />
+            <Button fx:id="add_button_2_BI" layoutX="24.0" layoutY="362.0" mnemonicParsing="false" onAction="#addButton2BIButtonClickedListener" onMouseEntered="#Add2BIbuttonEntered" onMouseExited="#Add2BIbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Add" textFill="WHITE" />
+            <Button fx:id="clear_button_2_BI" layoutX="166.0" layoutY="362.0" mnemonicParsing="false" onAction="#clearButton2BIButtonClickedListener" onMouseEntered="#Clear2BIbuttonEntered" onMouseExited="#Clear2BIbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" />
+            <Label layoutX="5.0" layoutY="334.0" text="Book Location" textFill="WHITE" />
+            <TextField fx:id="book_location_text_2_BI" layoutX="90.0" layoutY="330.0" prefHeight="25.0" prefWidth="184.0" promptText="can be Book Shelf ID" style="-fx-background-radius: 3em;" />
+            <Line endX="206.0" layoutX="95.0" layoutY="397.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="3.0" layoutY="398.0" prefHeight="25.0" prefWidth="111.0" text="Book Lending" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="429.0" text="Book ID" textFill="WHITE" />
+            <TextField fx:id="book_id_text_3_BL" layoutX="45.0" layoutY="425.0" prefHeight="25.0" prefWidth="241.0" promptText="Book ID" style="-fx-background-radius: 3em;" />
+            <Label layoutX="3.0" layoutY="457.0" text="Student ID" textFill="WHITE" />
+            <TextField fx:id="student_id_text_3_BL" layoutX="63.0" layoutY="453.0" prefHeight="25.0" prefWidth="223.0" promptText="Student ID" style="-fx-background-radius: 3em;" />
+            <Label layoutX="3.0" layoutY="487.0" text="Issued Date" textFill="WHITE" underline="true" />
+            <ComboBox fx:id="issued_date_year_combo_3_BL" layoutX="9.0" layoutY="510.0" prefHeight="25.0" prefWidth="86.0" />
+            <Label layoutX="100.0" layoutY="512.0" prefHeight="18.0" prefWidth="36.0" text="Month" textFill="WHITE" />
+            <ComboBox fx:id="issued_date_month_combo_3_BL" layoutX="138.0" layoutY="509.0" prefHeight="25.0" prefWidth="61.0" />
+            <Label layoutX="201.0" layoutY="513.0" prefHeight="18.0" prefWidth="23.0" text="Day" textFill="WHITE" />
+            <ComboBox fx:id="issued_date_day_combo_3_BL" layoutX="228.0" layoutY="509.0" prefHeight="25.0" prefWidth="58.0" />
+            <Button fx:id="lend_button_3_BL" layoutX="24.0" layoutY="584.0" mnemonicParsing="false" onAction="#lendButton3BLButtonClickedListener" onMouseEntered="#Lend3BLbuttonEntered" onMouseExited="#Lend3BLbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Lend" textFill="WHITE" />
+            <Button fx:id="clear_button_3_BL" layoutX="166.0" layoutY="584.0" mnemonicParsing="false" onAction="#clearButton3BLButtonClickedListener" onMouseEntered="#Clear3BLbuttonEntered" onMouseExited="#Clear3BLbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" />
+            <Label layoutX="2.0" layoutY="548.0" text="Given By " textFill="WHITE" />
+            <TextField fx:id="given_by_text_3_BL" layoutX="53.0" layoutY="544.0" prefHeight="25.0" prefWidth="235.0" promptText="Librarian ID" style="-fx-background-radius: 3em;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="302.0" layoutY="-2.0" prefHeight="666.0" prefWidth="604.0" style="-fx-background-color: #505050;">
+         <children>
+            <Label layoutX="3.0" layoutY="2.0" prefHeight="27.0" prefWidth="158.0" text="Librarian List Table" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="librarian_list_table_tableview_middle_LLT" layoutX="23.0" layoutY="63.0" prefHeight="149.0" prefWidth="279.0">
+              <columns>
+                <TableColumn fx:id="librarian_id_col_middle_LLT" prefWidth="73.0" text="Librarian ID" />
+                <TableColumn fx:id="librarian_name_col_middle_LLT" prefWidth="102.0" text="Librarian Name" />
+                  <TableColumn fx:id="shift_col_middle_LLT" prefWidth="81.0" text="Shift" />
+              </columns>
+            </TableView>
+            <TableView fx:id="book_list_table_tableview_middle_BLiT" layoutX="3.0" layoutY="288.0" prefHeight="139.0" prefWidth="594.0">
+              <columns>
+                <TableColumn fx:id="book_id_col_BLiT" prefWidth="75.0" text="Book ID" />
+                <TableColumn fx:id="title_col_BLiT" prefWidth="82.0" text="Title" />
+                  <TableColumn fx:id="publisher_col_BLiT" prefWidth="83.0" text="Publisher" />
+                  <TableColumn fx:id="author_col_BLiT" prefWidth="112.0" text="Author" />
+                  <TableColumn fx:id="book_quantity_col_BLiT" prefWidth="86.0" text="Book Quantity" />
+                  <TableColumn fx:id="book_location_col_BLiT" prefWidth="89.0" text="Book Location" />
+                  <TableColumn fx:id="book_left_col_BLT" prefWidth="81.0" text="Book Left" />
+              </columns>
+            </TableView>
+            <TableView fx:id="book_returned_table_tableview_BRI" layoutX="6.0" layoutY="513.0" prefHeight="139.0" prefWidth="594.0">
+              <columns>
+                <TableColumn fx:id="book_id_col_BRT" prefWidth="75.0" text="Book ID" />
+                <TableColumn fx:id="student_id_col_BRT" prefWidth="75.0" text="Student ID" />
+                  <TableColumn fx:id="issued_date_col_BRT" prefWidth="113.0" text="Issued Date" />
+                  <TableColumn fx:id="returned_date_col_BRT" prefWidth="105.0" text="Returned Date" />
+                  <TableColumn fx:id="given_by_col_BRT" prefWidth="104.0" text="Given By" />
+                  <TableColumn fx:id="returned_to_col_BRT" prefWidth="83.0" text="Returned To" />
+              </columns>
+            </TableView>
+            <Label layoutX="7.0" layoutY="254.0" prefHeight="27.0" prefWidth="124.0" text="Book List Table" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="482.0" prefHeight="27.0" prefWidth="175.0" text="Book Returned Table" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="search_by_librarian_id_text_middle_LLT" layoutX="21.0" layoutY="34.0" onInputMethodTextChanged="#SearchByLibrarianIDTextMiddleLLTKeyPressedReleaseEventListener" onKeyPressed="#SearchByLibrarianIDTextMiddleLLTKeyPressedReleaseEventListener" onKeyReleased="#SearchByLibrarianIDTextMiddleLLTKeyPressedReleaseEventListener" onKeyTyped="#SearchByLibrarianIDTextMiddleLLTKeyPressedReleaseEventListener" prefHeight="25.0" prefWidth="154.0" promptText="Search By Librarian ID" style="-fx-background-radius: 3em;" />
+            <Button fx:id="delete_button_middle_LLT" layoutX="181.0" layoutY="34.0" mnemonicParsing="false" onAction="#deleteButtonMiddleLLTButtonClickedListener" onMouseEntered="#DeleteMiddleLLTbuttonEntered" onMouseExited="#DeleteMiddleLLTbuttonExited" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Delete" textFill="WHITE" />
+            <Button fx:id="clear_button_middle_LLT" layoutX="245.0" layoutY="34.0" mnemonicParsing="false" onAction="#clearButtonMiddleLLTButtonClickedListener" onMouseEntered="#ClearMiddleLLTbuttonEntered" onMouseExited="#ClearMiddleLLTbuttonExited" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" />
+            <TableView fx:id="book_lending_table_middle_tableview_BLTT" layoutX="313.0" layoutY="63.0" prefHeight="149.0" prefWidth="279.0">
+              <columns>
+                <TableColumn fx:id="book_id_col_middle_BLTT" prefWidth="75.0" text="Book ID" />
+                <TableColumn fx:id="student_id_col_middle_BLTT" prefWidth="85.0" text="Student ID" />
+                  <TableColumn fx:id="issued_date_col_middle_BLTT" prefWidth="114.0" text="Issued Date" />
+              </columns>
+            </TableView>
+            <Label layoutX="313.0" layoutY="2.0" prefHeight="27.0" prefWidth="167.0" text="Book Lending Table" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="search_by_book_title_text_middle_BLiT" layoutX="134.0" layoutY="255.0" onInputMethodTextChanged="#searchByBookTitleMiddleBLiTKeyPressedEventListener" onKeyPressed="#searchByBookTitleMiddleBLiTKeyPressedEventListener" onKeyReleased="#searchByBookTitleMiddleBLiTKeyPressedEventListener" onKeyTyped="#searchByBookTitleMiddleBLiTKeyPressedEventListener" prefHeight="25.0" prefWidth="223.0" promptText="Search By Book Title" style="-fx-background-radius: 3em;" />
+            <Button fx:id="delete_button_middle_BLiT" layoutX="363.0" layoutY="255.0" mnemonicParsing="false" onAction="#deleteButtonMiddleBLiTButtonClickedListener" onMouseEntered="#DeleteMiddleBLiTbuttonEntered" onMouseExited="#DeleteMiddleBLiTbuttonExited" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Delete" textFill="WHITE" />
+            <Button fx:id="clear_button_middle_BLiT" layoutX="473.0" layoutY="254.0" mnemonicParsing="false" onAction="#clearButtonMiddleBLiTButtonClickedListener" onMouseEntered="#ClearMiddleBLiTbuttonEntered" onMouseExited="#ClearMiddleBLiTbuttonExited" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" />
+            <TextField fx:id="search_by_book_id_text_middle_BLT" layoutX="312.0" layoutY="34.0" onInputMethodTextChanged="#searchByBookIDMiddleBLTKeyPressedEventListener" onKeyPressed="#searchByBookIDMiddleBLTKeyPressedEventListener" onKeyReleased="#searchByBookIDMiddleBLTKeyPressedEventListener" onKeyTyped="#searchByBookIDMiddleBLTKeyPressedEventListener" prefHeight="25.0" prefWidth="154.0" promptText="Search By Student ID" style="-fx-background-radius: 3em;" />
+            <Button fx:id="delete_button_middle_BLT" layoutX="472.0" layoutY="34.0" mnemonicParsing="false" onAction="#deleteButtonMiddleBLTClickedListener" onMouseEntered="#DeleteMiddleBLTbuttonEntered" onMouseExited="#DeleteMiddleBLTbuttonExited" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Delete" textFill="WHITE" />
+            <Button fx:id="clear_button_middle_BLT" layoutX="536.0" layoutY="34.0" mnemonicParsing="false" onAction="#clearButtonMiddleBLTClickedListener" onMouseEntered="#ClearMiddleBLTbuttonEntered" onMouseExited="#ClearMiddleBLTbuttonExited" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" />
+            <Button fx:id="delete_whole_record_button_middle_BRT" layoutX="312.0" layoutY="482.0" mnemonicParsing="false" onAction="#deleteWholeButtonMiddleBRTButtonClickedListener" onMouseEntered="#DeleteWholeRecordMiddleBRTbuttonEntered" onMouseExited="#DeleteWholeRecordMiddleBRTbuttonExited" prefHeight="25.0" prefWidth="268.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Delete Whole Record" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="906.0" prefHeight="664.0" prefWidth="241.0" style="-fx-background-color: #0d3e48;">
+         <children>
+            <Label layoutX="7.0" layoutY="2.0" prefHeight="27.0" prefWidth="192.0" text="Edit Librarian Manager" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="4.0" layoutY="60.0" text="Librarian ID" textFill="WHITE" />
+            <TextField fx:id="librarian_id_text_4_ELM" layoutX="71.0" layoutY="56.0" prefHeight="25.0" prefWidth="212.0" promptText="Librarian ID" style="-fx-background-radius: 3em;" />
+            <Label layoutX="4.0" layoutY="88.0" text="Librarian Name" textFill="WHITE" />
+            <TextField fx:id="librarian_name_text_4_ELM" layoutX="91.0" layoutY="84.0" prefHeight="25.0" prefWidth="192.0" promptText="Librarian Name" style="-fx-background-radius: 3em;" />
+            <Label layoutX="4.0" layoutY="117.0" text="Shift" textFill="WHITE" />
+            <ComboBox fx:id="shift_combo_4_ELM" layoutX="45.0" layoutY="113.0" prefHeight="25.0" prefWidth="235.0" />
+            <Label layoutX="7.0" layoutY="30.0" text="Old Librarian ID" textFill="WHITE" />
+            <TextField fx:id="old_librarian_id_text_4_ELM" layoutX="94.0" layoutY="26.0" prefHeight="25.0" prefWidth="184.0" promptText="Old Librarian ID" style="-fx-background-radius: 3em;" />
+            <Button fx:id="edit_button_4_ELM" layoutX="23.0" layoutY="144.0" mnemonicParsing="false" onAction="#editButton4ELMButtonClickedListener" onMouseEntered="#Edit4ELMbuttonEntered" onMouseExited="#Edit4ELMbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Edit" textFill="WHITE" />
+            <Button fx:id="clear_button_4_ELM" layoutX="174.0" layoutY="144.0" mnemonicParsing="false" onAction="#clearButton4ELMButtonClickedListener" onMouseEntered="#Clear4ELMbuttonEntered" onMouseExited="#Clear4ELMbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" />
+            <Line endX="190.0" layoutX="100.0" layoutY="179.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="4.0" layoutY="180.0" text="Book Record Edit" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="234.0" text="Book ID" textFill="WHITE" />
+            <TextField fx:id="book_id_text_5_BRE" layoutX="50.0" layoutY="230.0" prefHeight="25.0" prefWidth="235.0" promptText="Book ID" style="-fx-background-radius: 3em;" />
+            <Label layoutX="6.0" layoutY="262.0" text="Book Title" textFill="WHITE" />
+            <TextField fx:id="book_title_text_5_BRE" layoutX="62.0" layoutY="258.0" prefHeight="25.0" prefWidth="223.0" promptText="Book Title" style="-fx-background-radius: 3em;" />
+            <Label layoutX="9.0" layoutY="291.0" prefHeight="17.0" prefWidth="53.0" text="Publisher" textFill="WHITE" />
+            <TextField fx:id="publisher_text_5_BRE" layoutX="62.0" layoutY="287.0" prefHeight="25.0" prefWidth="223.0" promptText="Publisher" style="-fx-background-radius: 3em;" />
+            <Label layoutX="10.0" layoutY="320.0" text="Author" textFill="WHITE" />
+            <TextField fx:id="author_text_5_BRE" layoutX="50.0" layoutY="316.0" prefHeight="25.0" prefWidth="235.0" promptText="Author" style="-fx-background-radius: 3em;" />
+            <Label layoutX="10.0" layoutY="348.0" text="No. of Pieces" textFill="WHITE" />
+            <TextField fx:id="no_of_book_text_5_BRE" layoutX="95.0" layoutY="344.0" prefHeight="25.0" prefWidth="184.0" promptText="No. of Book" style="-fx-background-radius: 3em;" />
+            <Button fx:id="edit_button_5_BRE" layoutX="29.0" layoutY="409.0" mnemonicParsing="false" onAction="#editButton5BREButtonClickedListener" onMouseEntered="#Edit5BREbuttonEntered" onMouseExited="#Edit5BREbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Edit" textFill="WHITE" />
+            <Button fx:id="clear_button_5_BRE" layoutX="171.0" layoutY="409.0" mnemonicParsing="false" onAction="#clearButton5BREButtonClickedListener" onMouseEntered="#Clear5BREbuttonEntered" onMouseExited="#Clear5BREbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" />
+            <Label layoutX="10.0" layoutY="381.0" text="Book Location" textFill="WHITE" />
+            <TextField fx:id="book_location_text_5_BRE" layoutX="95.0" layoutY="377.0" prefHeight="25.0" prefWidth="184.0" promptText="can be Book Shelf ID" style="-fx-background-radius: 3em;" />
+            <Label layoutX="6.0" layoutY="208.0" text="Old Book ID" textFill="WHITE" />
+            <TextField fx:id="old_book_id_text_5_BRE" layoutX="73.0" layoutY="204.0" prefHeight="25.0" prefWidth="212.0" promptText="Old Book ID" style="-fx-background-radius: 3em;" />
+            <Line endX="190.0" layoutX="100.0" layoutY="444.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="4.0" layoutY="445.0" text="Book Returning" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="479.0" text="Book ID" textFill="WHITE" />
+            <TextField fx:id="book_id_text_6_BR" layoutX="47.0" layoutY="475.0" prefHeight="25.0" prefWidth="241.0" promptText="Book ID" style="-fx-background-radius: 3em;" />
+            <Label layoutX="5.0" layoutY="507.0" text="Student ID" textFill="WHITE" />
+            <TextField fx:id="student_id_text_6_BR" layoutX="65.0" layoutY="503.0" prefHeight="25.0" prefWidth="223.0" promptText="Student ID" style="-fx-background-radius: 3em;" />
+            <Label layoutX="5.0" layoutY="537.0" text="Returned Date" textFill="WHITE" underline="true" />
+            <ComboBox fx:id="returned_date_year_combo_6_BR" layoutX="11.0" layoutY="560.0" prefHeight="25.0" prefWidth="86.0" />
+            <Label layoutX="102.0" layoutY="562.0" prefHeight="18.0" prefWidth="36.0" text="Month" textFill="WHITE" />
+            <ComboBox fx:id="join_date_month_combo_3_RA1" layoutX="140.0" layoutY="559.0" prefHeight="25.0" prefWidth="61.0" />
+            <Label layoutX="203.0" layoutY="563.0" prefHeight="18.0" prefWidth="23.0" text="Day" textFill="WHITE" />
+            <ComboBox fx:id="returned_date_day_combo_6_BR" layoutX="230.0" layoutY="559.0" prefHeight="25.0" prefWidth="58.0" />
+            <Button fx:id="return_button_6_BR" layoutX="30.0" layoutY="625.0" mnemonicParsing="false" onAction="#returnButton6ButtonClickedListener" onMouseEntered="#Return6BRbuttonEntered" onMouseExited="#Return6BRbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Return" textFill="WHITE" />
+            <Button fx:id="clear_button_6_BR" layoutX="172.0" layoutY="625.0" mnemonicParsing="false" onAction="#clearButton6ButtonClickedListener" onMouseEntered="#Clear6BRbuttonEntered" onMouseExited="#Clear6BRbuttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" />
+            <Label layoutX="3.0" layoutY="596.0" text="Return To" textFill="WHITE" />
+            <TextField fx:id="return_to_librarian_id_text_6_BR" layoutX="66.0" layoutY="592.0" prefHeight="25.0" prefWidth="223.0" promptText="Librarian ID" style="-fx-background-radius: 3em;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

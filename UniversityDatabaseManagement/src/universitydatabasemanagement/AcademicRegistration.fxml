@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="656.0" prefWidth="1123.0" style="-fx-background-color: #6a4456;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universitydatabasemanagement.AcademicRegistrationController">
+   <children>
+      <AnchorPane layoutX="-8.0" prefHeight="655.0" prefWidth="382.0" style="-fx-background-color: #4a563f;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="749.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="23.0" layoutY="372.0" prefHeight="18.0" prefWidth="102.0" text="Selected Program :" textFill="WHITE" AnchorPane.bottomAnchor="268.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="257.0" AnchorPane.topAnchor="372.0" />
+            <ComboBox fx:id="selected_program_combo_1_list" layoutX="141.0" layoutY="368.0" onAction="#ComboBoxEventOccurWhenSelected" prefHeight="25.0" prefWidth="223.0" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="141.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="368.0" />
+            <TableView fx:id="program_course_tableview_1" layoutX="13.0" layoutY="397.0" prefHeight="235.0" prefWidth="367.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="397.0">
+              <columns>
+                  <TableColumn fx:id="course_id_col_1" prefWidth="83.00003051757812" text="Course ID" />
+                  <TableColumn fx:id="course_name_col_1" prefWidth="182.0" text="Course Name" />
+                  <TableColumn fx:id="credit_hours_col_1" prefWidth="106.0" text="Credit Hours" />
+              </columns>
+            </TableView>
+            <Label layoutX="34.0" layoutY="623.0" prefHeight="19.0" prefWidth="307.0" text="Program Name and Related Course List Table" textFill="WHITE" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="623.0">
+               <font>
+                  <Font name="Trebuchet MS Italic" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="-1.0" prefHeight="159.0" prefWidth="382.0" style="-fx-background-color: #565770; -fx-background-radius: 3em;" AnchorPane.bottomAnchor="498.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="143.0" layoutY="14.0" prefHeight="19.0" prefWidth="115.0" text="Student Mapping" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="127.0" AnchorPane.leftAnchor="143.0" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font name="Trebuchet MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="45.0" prefHeight="18.0" prefWidth="60.0" text="Student ID" textFill="WHITE" AnchorPane.bottomAnchor="96.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="277.0" AnchorPane.topAnchor="45.0" />
+                  <TextField fx:id="student_id_text_map_1" layoutX="116.0" layoutY="41.0" prefHeight="25.0" prefWidth="223.0" promptText="Student ID" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="93.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="41.0" />
+                  <Label layoutX="45.0" layoutY="80.0" prefHeight="18.0" prefWidth="60.0" text="Course ID" textFill="WHITE" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="277.0" AnchorPane.topAnchor="80.0" />
+                  <TextField fx:id="course_id_text_map_1" layoutX="116.0" layoutY="77.0" prefHeight="25.0" prefWidth="223.0" promptText="Course ID" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="77.0" />
+                  <Button fx:id="add_button_map_1" layoutX="61.0" layoutY="114.0" mnemonicParsing="false" onAction="#AddButtonMap1ButtonClickedListener" onMouseEntered="#AddMap1buttonEntered" onMouseExited="#AddMap1buttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="232.0" AnchorPane.topAnchor="114.0" />
+                  <Button fx:id="clear_button_map_1" layoutX="240.0" layoutY="114.0" mnemonicParsing="false" onAction="#ClearButtonMap1ButtonClickedListener" onMouseEntered="#ClearMap1buttonEntered" onMouseExited="#ClearMap1buttonExited" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="114.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="student_program_course_mapped_tableview_2" layoutX="404.0" layoutY="281.0" prefHeight="174.0" prefWidth="705.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="281.0">
+        <columns>
+          <TableColumn fx:id="student_id_col_2_mapped" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Student ID" />
+          <TableColumn fx:id="student_name_col_2_mapped" prefWidth="223.0" style="-fx-alignment: CENTER;" text="Student Name" />
+            <TableColumn fx:id="program_id_col_2_mapped" prefWidth="147.0" style="-fx-alignment: CENTER;" text="Program ID" />
+            <TableColumn fx:id="program_name_col_2_mapped" prefWidth="255.0" style="-fx-alignment: CENTER;" text="Program Name" />
+        </columns>
+      </TableView>
+      <TableView fx:id="student_program_course_to_be_mapped_tableview_2" layoutX="404.0" layoutY="42.0" prefHeight="186.0" prefWidth="705.0" AnchorPane.bottomAnchor="430.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
+        <columns>
+          <TableColumn fx:id="student_id_col_2_tobe" prefWidth="136.0" style="-fx-alignment: CENTER;" text="Student ID" />
+          <TableColumn fx:id="student_name_col_2_tobe" prefWidth="216.0" style="-fx-alignment: CENTER;" text="Student Name" />
+            <TableColumn fx:id="selected_program_col_2_tobe" prefWidth="341.0" style="-fx-alignment: CENTER;" text="Selected Program" />
+        </columns>
+      </TableView>
+      <Label layoutX="404.0" layoutY="250.0" prefHeight="19.0" prefWidth="240.0" text="Student, Program &amp; Course Mapped" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="389.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="479.0" AnchorPane.topAnchor="250.0">
+         <font>
+            <Font name="Trebuchet MS" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="404.0" layoutY="14.0" prefHeight="19.0" prefWidth="350.0" text="Student, Program &amp; Course yet to be Mapped Once" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="625.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="369.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Trebuchet MS" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="search_student_id_text_2_mapped" layoutX="648.0" layoutY="247.0" prefHeight="25.0" prefWidth="196.0" promptText="Search Student ID" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="386.0" AnchorPane.leftAnchor="648.0" AnchorPane.rightAnchor="279.0" AnchorPane.topAnchor="247.0" />
+      <Button fx:id="delete_whole_button_2" layoutX="852.0" layoutY="247.0" mnemonicParsing="false" onAction="#DeleteWhole2ButtonClickedListener" onMouseEntered="#DeleteWhole2buttonEntered" onMouseExited="#DeleteWhole2buttonExited" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Delete Whole Student Courses" textFill="WHITE" AnchorPane.bottomAnchor="386.0" AnchorPane.leftAnchor="852.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="247.0" />
+      <Button fx:id="clear_button_2_mapped" layoutX="1049.0" layoutY="247.0" mnemonicParsing="false" onAction="#clearButton2MappedButtonClickedListener" onMouseEntered="#ClearMapped2buttonEntered" onMouseExited="#ClearMapped2buttonExited" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="386.0" AnchorPane.leftAnchor="1049.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="247.0" />
+      <TableView fx:id="student_courses_tableview_2" layoutX="404.0" layoutY="498.0" prefHeight="146.0" prefWidth="705.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="498.0">
+         <columns>
+            <TableColumn fx:id="courses_id_col_2_student_courses" prefWidth="170.0" style="-fx-alignment: CENTER;" text="Course ID" />
+            <TableColumn fx:id="course_name_col_2_student_courses" prefWidth="420.0" style="-fx-alignment: CENTER;" text="Course Name" />
+            <TableColumn fx:id="credit_hours_col_2_student_courses" minWidth="0.0" prefWidth="105.0" style="-fx-alignment: CENTER;" text="Credit Hours" />
+         </columns>
+      </TableView>
+      <Label layoutX="404.0" layoutY="470.0" prefHeight="19.0" prefWidth="102.0" text="Courses Taken" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="617.0" AnchorPane.topAnchor="470.0">
+         <font>
+            <Font name="Trebuchet MS" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="course_id_show_courses_text_2" layoutX="822.0" layoutY="467.0" prefHeight="25.0" prefWidth="148.0" promptText="Course ID" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="166.0" AnchorPane.leftAnchor="822.0" AnchorPane.rightAnchor="153.0" AnchorPane.topAnchor="467.0" />
+      <Button fx:id="delete_button_2_show_courses" layoutX="978.0" layoutY="467.0" mnemonicParsing="false" onAction="#DeleteButton2ButtonClickedListener" onMouseEntered="#DeleteShowCourses2buttonEntered" onMouseExited="#DeleteShowCourses2buttonExited" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Delete" textFill="WHITE" AnchorPane.bottomAnchor="166.0" AnchorPane.leftAnchor="978.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="467.0" />
+      <Button fx:id="clear_button_2_show_courses" layoutX="1049.0" layoutY="467.0" mnemonicParsing="false" onAction="#clearButton2ButtonClickedListener" onMouseEntered="#ClearShowCourses2buttonEntered" onMouseExited="#ClearShowCourses2buttonExited" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="166.0" AnchorPane.leftAnchor="1049.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="467.0" />
+      <TextField fx:id="student_id_show_courses_text_2" layoutX="519.0" layoutY="467.0" prefHeight="25.0" prefWidth="148.0" promptText="Student ID" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="166.0" AnchorPane.leftAnchor="519.0" AnchorPane.rightAnchor="456.0" AnchorPane.topAnchor="467.0" />
+      <Button fx:id="show_courses_button_2_show_course" layoutX="678.0" layoutY="467.0" mnemonicParsing="false" onAction="#showCourses2ButtonClickedListener" onMouseEntered="#ShowCourses2buttonEntered" onMouseExited="#ShowCourses2buttonExited" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Show Courses" textFill="WHITE" AnchorPane.bottomAnchor="166.0" AnchorPane.leftAnchor="678.0" AnchorPane.rightAnchor="317.0" AnchorPane.topAnchor="467.0" />
+   </children>
+</AnchorPane>

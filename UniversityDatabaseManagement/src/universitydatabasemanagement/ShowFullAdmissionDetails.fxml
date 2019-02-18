@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="1161.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.102" fx:controller="universitydatabasemanagement.ShowFullAdmissionDetailsController">
+   <children>
+      <TableView fx:id="full_application_tableview" layoutX="-1.0" prefHeight="402.0" prefWidth="792.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="id_col" prefWidth="75.0" text="Applicant ID" />
+          <TableColumn fx:id="full_name_col" prefWidth="86.0" text="Full Name" />
+            <TableColumn fx:id="address_col" prefWidth="138.0" text="Full Address" />
+            <TableColumn fx:id="nationality_col" minWidth="0.0" prefWidth="79.0" text="Nationality" />
+            <TableColumn fx:id="email_col" prefWidth="162.0" text="Email" />
+            <TableColumn fx:id="contact_col" prefWidth="120.0" text="Contact" />
+            <TableColumn fx:id="admission_type_col" prefWidth="135.0" text="Admission Type" />
+            <TableColumn fx:id="selected_program_col" prefWidth="106.0" text="Selected Program" />
+            <TableColumn fx:id="marks_details_col" prefWidth="154.0" text="Marks Details" />
+            <TableColumn fx:id="selection_status_col" prefWidth="101.0" text="Selection Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

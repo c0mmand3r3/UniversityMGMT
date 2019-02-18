@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="292.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.102" fx:controller="universitydatabasemanagement.EditEnquiryFormController">
+   <children>
+      <AnchorPane fx:id="enquiry_form_anchorpane_right" layoutX="-1.0" layoutY="10.0" prefHeight="513.0" prefWidth="292.0" style="-fx-background-color: #5f495b; -fx-background-radius: 3em;">
+         <children>
+            <Label layoutX="73.0" layoutY="14.0" prefHeight="19.0" prefWidth="81.0" text="Enquiry Form" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="480.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="88.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="40.0" prefHeight="19.0" prefWidth="57.0" text="Enquiry ID" textFill="WHITE" AnchorPane.bottomAnchor="454.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="178.0" AnchorPane.topAnchor="40.0" />
+            <TextField fx:id="enquiry_id_text_1" layoutX="73.0" layoutY="37.0" prefHeight="25.0" prefWidth="162.0" promptText="Enquiry ID (Unique)" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="451.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="37.0" />
+            <Label layoutX="7.0" layoutY="71.0" prefHeight="19.0" prefWidth="57.0" text="Full Name" textFill="WHITE" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="178.0" AnchorPane.topAnchor="71.0" />
+            <TextField fx:id="full_name_text_1" layoutX="73.0" layoutY="68.0" prefHeight="25.0" prefWidth="162.0" promptText="Full Name" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="68.0" />
+            <Label layoutX="7.0" layoutY="103.0" prefHeight="19.0" prefWidth="32.0" text="Email" textFill="WHITE" AnchorPane.bottomAnchor="391.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="203.0" AnchorPane.topAnchor="103.0" />
+            <TextField fx:id="email_text_1" layoutX="46.0" layoutY="100.0" prefHeight="25.0" prefWidth="189.0" promptText="Email" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="388.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="100.0" />
+            <Label layoutX="7.0" layoutY="132.0" prefHeight="19.0" prefWidth="66.0" text="Contact No." textFill="WHITE" AnchorPane.bottomAnchor="362.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="132.0" />
+            <TextField fx:id="contact_no_text_1" layoutX="73.0" layoutY="129.0" prefHeight="25.0" prefWidth="162.0" promptText="Contact No." style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="359.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="129.0" />
+            <Label layoutX="7.0" layoutY="162.0" prefHeight="19.0" prefWidth="66.0" text="Full Address" textFill="WHITE" AnchorPane.bottomAnchor="332.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="162.0" />
+            <TextArea fx:id="full_address_textArea_1" layoutX="73.0" layoutY="162.0" prefHeight="64.0" prefWidth="162.0" promptText="Full Address" AnchorPane.bottomAnchor="287.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="162.0" />
+            <Label layoutX="7.0" layoutY="274.0" prefHeight="19.0" prefWidth="66.0" text="Nationality" textFill="WHITE" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="274.0" />
+            <ComboBox fx:id="nationality_combo_1" layoutX="73.0" layoutY="271.0" prefHeight="25.0" prefWidth="162.0" style="-fx-background-radius: 2em;" AnchorPane.bottomAnchor="217.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="271.0" />
+            <Label layoutX="6.0" layoutY="307.0" prefHeight="19.0" prefWidth="89.0" text="Type of Degree" textFill="WHITE" AnchorPane.bottomAnchor="187.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="147.0" AnchorPane.topAnchor="307.0" />
+            <ComboBox fx:id="degree_combo_1" layoutX="95.0" layoutY="304.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="184.0" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="304.0" />
+            <Label layoutX="6.0" layoutY="338.0" prefHeight="19.0" prefWidth="66.0" text="Intrested in" textFill="WHITE" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="338.0" />
+            <TextArea fx:id="intrested_in_textArea_1" layoutX="75.0" layoutY="338.0" prefHeight="73.0" prefWidth="162.0" promptText="Intrested In Subject and Other things" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="338.0" />
+            <Label layoutX="7.0" layoutY="238.0" prefHeight="19.0" prefWidth="39.0" text="Status" textFill="WHITE" AnchorPane.bottomAnchor="256.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="238.0" />
+            <Button fx:id="add_button_1" layoutX="25.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#AddButtonEnquiryFormClickedListener" onMouseEntered="#Add1buttonEntered" onMouseExited="#Add1buttonExited" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Update" textFill="WHITE" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="440.0" />
+            <Button fx:id="clear_button_form_1" layoutX="165.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#clearButtonEnquiryFormClickedListener" onMouseEntered="#Clear1FormbuttonEntered" onMouseExited="#Clear1FormbuttonExited" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="440.0" />
+            <HBox layoutX="66.0" layoutY="239.0">
+               <children>
+                  <RadioButton fx:id="choice_student_1" mnemonicParsing="false" text="Student           " textFill="WHITE" />
+                  <RadioButton fx:id="choice_none_1" mnemonicParsing="false" text="None" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="621.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universitydatabasemanagement.CourseManagementSystemController">
+   <children>
+      <AnchorPane style="-fx-background-color: #2fb746;" AnchorPane.bottomAnchor="598.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="7.0" layoutY="8.0" prefHeight="15.0" prefWidth="107.0" text="Course Manager" textFill="#fcfcfc" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="798.0" AnchorPane.topAnchor="8.0">
+               <font>
+                  <Font name="Elephant" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="31.0" prefHeight="590.0" prefWidth="328.0" style="-fx-background-color: #ddf7e1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="584.0" AnchorPane.topAnchor="31.0">
+         <children>
+            <Label layoutX="6.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="93.0" text="Add Information" AnchorPane.bottomAnchor="569.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="229.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="Nirmala UI" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="62.0" text="Program ID" AnchorPane.bottomAnchor="546.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="252.0" AnchorPane.topAnchor="37.0">
+               <font>
+                  <Font name="Nirmala UI" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="program_id_textfield" layoutX="94.0" layoutY="32.0" prefHeight="25.0" prefWidth="220.0" promptText="   Program ID (Should Match)" style="-fx-background-radius: 2em;" AnchorPane.bottomAnchor="541.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="32.0" />
+            <Label layoutX="14.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="55.0" text="Course ID" AnchorPane.bottomAnchor="515.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="259.0" AnchorPane.topAnchor="68.0">
+               <font>
+                  <Font name="Nirmala UI" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="course_id_textfield" layoutX="94.0" layoutY="63.0" prefHeight="25.0" prefWidth="220.0" promptText="  Course ID" style="-fx-background-radius: 2em;" />
+            <Label layoutX="14.0" layoutY="99.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="76.0" text="Course Name" AnchorPane.bottomAnchor="484.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="238.0" AnchorPane.topAnchor="99.0">
+               <font>
+                  <Font name="Nirmala UI" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="course_name_textfield" layoutX="94.0" layoutY="94.0" prefHeight="25.0" prefWidth="220.0" promptText="  Course Name" style="-fx-background-radius: 2em;" AnchorPane.bottomAnchor="479.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="94.0" />
+            <Label layoutX="15.0" layoutY="131.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="76.0" text="Credit Hours" AnchorPane.bottomAnchor="452.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="237.0" AnchorPane.topAnchor="131.0">
+               <font>
+                  <Font name="Nirmala UI" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="credit_hours_textfield" layoutX="94.0" layoutY="126.0" prefHeight="25.0" prefWidth="220.0" promptText="  Credit Hours" style="-fx-background-radius: 2em;" AnchorPane.bottomAnchor="447.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="126.0" />
+            <Button fx:id="add_button" layoutX="24.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#addButtonClickedListener" onMouseEntered="#AddbuttonEntered" onMouseExited="#AddbuttonExited" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #38baaa; -fx-background-radius: 2em;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="406.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="228.0" AnchorPane.topAnchor="167.0" />
+            <Button fx:id="clear_button" layoutX="226.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#clearButtonClickedListener" onMouseEntered="#ClearbuttonEntered" onMouseExited="#ClearbuttonExited" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #38baaa; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="406.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="167.0" />
+            <Button fx:id="preview_button" layoutX="126.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#previewButtonClickedListener" onMouseEntered="#PreviewbuttonEntered" onMouseExited="#PreviewbuttonExited" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #38baaa; -fx-background-radius: 2em;" text="Preview" textFill="WHITE" AnchorPane.bottomAnchor="406.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="126.0" AnchorPane.topAnchor="167.0" />
+            <ImageView fitHeight="105.0" fitWidth="86.0" layoutX="108.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="129.0557403564453" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="134.0" AnchorPane.topAnchor="367.9442596435547">
+               <image>
+                  <Image url="@../mainMenuImages/logo_college.png" />
+               </image>
+               <effect>
+                  <Reflection bottomOpacity="0.01" topOpacity="0.45">
+                     <input>
+                        <SepiaTone />
+                     </input>
+                  </Reflection>
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="course_information_tableview" layoutX="342.0" layoutY="99.0" prefHeight="200.0" prefWidth="549.0" AnchorPane.bottomAnchor="330.0" AnchorPane.leftAnchor="342.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="99.0">
+        <columns>
+          <TableColumn fx:id="program_id_column" prefWidth="90.0" style="-fx-alignment: CENTER;" text="Program ID" />
+          <TableColumn fx:id="course_id_column" prefWidth="114.0" style="-fx-alignment: CENTER;" text="Course ID" />
+            <TableColumn fx:id="course_name_column" prefWidth="262.0" style="-fx-alignment: CENTER;" text="Course Name" />
+            <TableColumn fx:id="credit_hours_column" prefWidth="82.0" style="-fx-alignment: CENTER;" text="Credit Hours" />
+        </columns>
+      </TableView>
+      <TableView fx:id="program_information_tableview" layoutX="342.0" layoutY="361.0" prefHeight="200.0" prefWidth="549.0" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="342.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="361.0">
+        <columns>
+          <TableColumn fx:id="program_id_column_program" prefWidth="183.0" style="-fx-alignment: CENTER;" text="Program ID" />
+          <TableColumn fx:id="program_name_column_program" prefWidth="365.0" style="-fx-alignment: CENTER;" text="Program Name" />
+        </columns>
+      </TableView>
+      <Label layoutX="342.0" layoutY="77.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="139.0" text="Course Information" textFill="#b25959" underline="true" AnchorPane.bottomAnchor="537.0" AnchorPane.leftAnchor="342.0" AnchorPane.rightAnchor="431.0" AnchorPane.topAnchor="77.0">
+         <font>
+            <Font name="Rockwell Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="342.0" layoutY="338.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="148.0" text="Program Information" textFill="#b25959" underline="true" AnchorPane.bottomAnchor="276.0" AnchorPane.leftAnchor="342.0" AnchorPane.rightAnchor="422.0" AnchorPane.topAnchor="338.0">
+         <font>
+            <Font name="Rockwell Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="348.0" layoutY="39.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="115.0" text="Search By Course ID :" AnchorPane.bottomAnchor="575.0" AnchorPane.leftAnchor="348.0" AnchorPane.rightAnchor="449.0" AnchorPane.topAnchor="39.0">
+         <font>
+            <Font name="Nirmala UI" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="search_course_id_textfield" layoutX="472.0" layoutY="34.0" prefHeight="25.0" prefWidth="148.0" promptText="  Course ID" style="-fx-background-radius: 2em;" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="472.0" AnchorPane.rightAnchor="292.0" AnchorPane.topAnchor="34.0" />
+      <Button fx:id="edit_button" layoutX="630.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#editButtonClickedListener" onMouseEntered="#EditbuttonEntered" onMouseExited="#EditbuttonExited" prefHeight="15.0" prefWidth="55.0" style="-fx-background-color: #38baaa;" text="Edit" textFill="WHITE" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="630.0" AnchorPane.rightAnchor="227.0" AnchorPane.topAnchor="34.0" />
+      <Button fx:id="delete_button" layoutX="694.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#deleteButtonClickedListener" onMouseEntered="#DeletebuttonEntered" onMouseExited="#DeletebuttonExited" prefHeight="15.0" prefWidth="55.0" style="-fx-background-color: #38baaa;" text="Delete" textFill="WHITE" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="694.0" AnchorPane.rightAnchor="163.0" AnchorPane.topAnchor="34.0" />
+      <Pane fx:id="refresh_pane" layoutX="857.0" layoutY="72.0" onMouseClicked="#refreshPaneButtonClickedListener" onMouseEntered="#RefreshbuttonEntered" onMouseExited="#RefreshbuttonExited" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #38baaa; -fx-background-radius: 1em;" AnchorPane.bottomAnchor="532.0" AnchorPane.leftAnchor="857.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="72.0">
+         <children>
+            <ImageView fx:id="add_record_image_symbol" fitHeight="25.0" fitWidth="23.0" layoutX="-1.0" layoutY="2.0" onMouseClicked="#refreshPaneButtonClickedListener" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../mainMenuImages/refresh_images.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Button fx:id="add_to_next_program_button" layoutX="755.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#addToProgramClickedListener" onMouseEntered="#AddTobuttonEntered" onMouseExited="#AddTobuttonExited" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: #38baaa;" text="Add To Next Program" textFill="WHITE" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="755.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="34.0" />
+   </children>
+</AnchorPane>

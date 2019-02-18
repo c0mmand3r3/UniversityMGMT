@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="490.0" prefWidth="927.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.102" fx:controller="universitydatabasemanagement.ShowCampusDetailsController">
+   <children>
+      <TableView fx:id="show_tableview" prefHeight="490.0" prefWidth="927.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="cid_col" prefWidth="55.0" text="CID" />
+          <TableColumn fx:id="name_col" prefWidth="70.0" text="Name" />
+            <TableColumn fx:id="type_col" prefWidth="67.0" text="Type" />
+            <TableColumn fx:id="address_col" prefWidth="124.0" text="Full Address" />
+            <TableColumn fx:id="town_col" prefWidth="48.0" text="Town" />
+            <TableColumn fx:id="district_col" prefWidth="61.0" text="District" />
+            <TableColumn fx:id="state_col" prefWidth="59.0" text="State" />
+            <TableColumn fx:id="country_col" prefWidth="56.0" text="Country" />
+            <TableColumn fx:id="website_col" prefWidth="82.0" text="Website" />
+            <TableColumn fx:id="contact_col" minWidth="0.0" prefWidth="78.0" text="Contact" />
+            <TableColumn fx:id="email_col" prefWidth="149.0" text="Email" />
+            <TableColumn fx:id="postbox_col" prefWidth="76.0" text="Post-Box" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

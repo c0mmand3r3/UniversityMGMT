@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="1297.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universitydatabasemanagement.HumanResourcesManagementController">
+   <children>
+      <AnchorPane layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="719.0" prefWidth="305.0" style="-fx-background-color: #257468;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="992.0" AnchorPane.topAnchor="0.0">
+         <children>
+             
+            <Button fx:id="employee_button_choosefirst" layoutY="151.0" mnemonicParsing="false" onAction="#EmployeeButtonClickedListener" onMouseEntered="#EmployeeButtonEntered" onMouseExited="#EmployeeButtonExited" prefHeight="48.0" prefWidth="305.0" style="-fx-background-color: #408080;" text="Employee" textFill="WHITE" AnchorPane.bottomAnchor="520.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="151.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/employeeImages.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="attendance_button_choosefirst" layoutY="197.0" mnemonicParsing="false" onAction="#AttendanceButtonClickedListener" onMouseEntered="#AttendanceButtonEntered" onMouseExited="#AttendanceButtonExited" prefHeight="48.0" prefWidth="305.0" style="-fx-background-color: #408080;" text="Attendance" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="474.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="197.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/todayAttendanceImages.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="status_button_choosefirst" layoutY="238.0" mnemonicParsing="false" onAction="#StatusButtonClickedListener" onMouseEntered="#StatusButtonEntered" onMouseExited="#StatusButtonExited" prefHeight="48.0" prefWidth="305.0" style="-fx-background-color: #408080;" text="Status" textFill="WHITE" AnchorPane.bottomAnchor="433.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="238.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/statusimage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="salary_button_choosefirst" layoutY="284.0" mnemonicParsing="false" onAction="#SalaryButtonClickedListener" onMouseEntered="#SalaryButtonEntered" onMouseExited="#SalaryButtonExited" prefHeight="48.0" prefWidth="305.0" style="-fx-background-color: #408080;" text="Salary" textFill="WHITE" AnchorPane.bottomAnchor="387.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="284.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/salaryimages.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <StackPane layoutX="302.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="719.0" prefWidth="683.0" style="-fx-background-color: #946b6b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="302.0" AnchorPane.rightAnchor="312.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="status_anchorpane_middle" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <TableView fx:id="employee_table_tableview_status_middle" layoutX="14.0" layoutY="166.0" prefHeight="542.0" prefWidth="661.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="166.0">
+                    <columns>
+                      <TableColumn fx:id="id_tablecolumn_employee_table_status_middle" prefWidth="67.0" text="ID" />
+                      <TableColumn fx:id="name_tablecolumn_employee_table_status_middle" prefWidth="108.0" text="Name" />
+                        <TableColumn fx:id="contact_tablecolumn_employee_table_status_middle" text="Contact" />
+                        <TableColumn fx:id="job_title_tablecolumn_employee_table_status_middle" prefWidth="91.0" text="Job Title" />
+                        <TableColumn fx:id="department_tablecolumn_employee_table_status_middle" prefWidth="109.0" text="Department" />
+                        <TableColumn fx:id="type_tablecolumn_employee_table_status_middle" prefWidth="104.0" text="Type" />
+                        <TableColumn fx:id="status_tablecolumn_employee_table_status_middle" prefWidth="98.0" text="Status" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="130.0" prefHeight="27.0" prefWidth="137.0" text="Employee Table" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="562.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="532.0" AnchorPane.topAnchor="130.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="search_by_employee_name_textfield_status_middle" layoutX="171.0" layoutY="105.0" onInputMethodTextChanged="#searchByEmployeeNameTextFieldStatusMiddleKeyPressedListenerStatusMiddle" onKeyPressed="#searchByEmployeeNameTextFieldStatusMiddleKeyPressedListenerStatusMiddle" onKeyReleased="#searchByEmployeeNameTextFieldStatusMiddleKeyPressedListenerStatusMiddle" onKeyTyped="#searchByEmployeeNameTextFieldStatusMiddleKeyPressedListenerStatusMiddle" prefHeight="25.0" prefWidth="230.0" promptText="Employee Name" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="589.0" AnchorPane.leftAnchor="171.0" AnchorPane.rightAnchor="282.0" AnchorPane.topAnchor="105.0" />
+                  <Label layoutX="93.0" layoutY="109.0" text="Search By :" AnchorPane.bottomAnchor="593.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="532.0" AnchorPane.topAnchor="109.0" />
+                  <Button fx:id="clear_button_status_middle" layoutX="420.0" layoutY="105.0" mnemonicParsing="false" onAction="#clearButtonStatusMiddleButtonClickedListenerStatusMiddle" onMouseEntered="#clearbuttonEnteredStatusMiddle" onMouseExited="#clearbuttonExitedStatusMiddle" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="589.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="105.0" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="attendance_anchorpane_middle" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <TableView fx:id="attendance_record_tableview_attendance_middle" layoutX="8.0" layoutY="505.0" prefHeight="200.0" prefWidth="668.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="505.0">
+                    <columns>
+                      <TableColumn fx:id="date_tablecolumn_attendance_record_attendance_middle" prefWidth="156.99996948242188" text="Date" />
+                      <TableColumn fx:id="id_tablecolumn_attendance_record_attendance_middle" prefWidth="131.0" text="ID" />
+                        <TableColumn fx:id="employee_name_tablecolumn_attendance_record_attendance_middle" prefWidth="245.0" text="Employee Name" />
+                        <TableColumn fx:id="status_tablecolumn_attendance_record_attendance_middle" prefWidth="133.0" text="Status" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="employee_list_tableview_attendance_middle" layoutX="8.0" layoutY="131.0" prefHeight="200.0" prefWidth="668.0" AnchorPane.bottomAnchor="388.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="131.0">
+                    <columns>
+                      <TableColumn fx:id="id_tablecolumn_employee_list_attendance_middle" prefWidth="99.99996948242188" text="ID" />
+                      <TableColumn fx:id="fullname_tablecolumn_employee_list_attendance_middle" prefWidth="179.0" text="Full Name" />
+                        <TableColumn fx:id="jobtitle_tablecolumn_employee_list_attendance_middle" minWidth="0.0" prefWidth="124.0" text="Job Title" />
+                        <TableColumn fx:id="department_tablecolumn_employee_list_attendance_middle" prefWidth="160.0" text="Department" />
+                        <TableColumn fx:id="type_tablecolumn_employee_list_attendance_middle" prefWidth="99.0" text="Type" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="5.0" layoutY="101.0" prefHeight="27.0" prefWidth="114.0" text="Employee List" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="591.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="564.0" AnchorPane.topAnchor="101.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="5.0" layoutY="468.0" prefHeight="27.0" prefWidth="230.0" text="Present Attendance Record" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="224.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="448.0" AnchorPane.topAnchor="468.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="search_by_employee_name_text_attendance_middle1" layoutX="178.0" layoutY="438.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onInputMethodTextChanged="#FillAttendanceTableKeyPressedEventListenerAttendanceMiddle" onKeyPressed="#FillAttendanceTableKeyPressedEventListenerAttendanceMiddle" onKeyReleased="#FillAttendanceTableKeyPressedEventListenerAttendanceMiddle" onKeyTyped="#FillAttendanceTableKeyPressedEventListenerAttendanceMiddle" prefHeight="25.0" prefWidth="199.0" promptText="Search By Employee ID" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="256.0" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="306.0" AnchorPane.topAnchor="438.0" />
+                  <Button fx:id="delete_button_attendance_middle" layoutX="404.0" layoutY="400.0" mnemonicParsing="false" onAction="#DeleteButtonClickedListenerAttendanceMiddle" onMouseEntered="#DeletebuttonEnteredAttendanceMiddle" onMouseExited="#DeletebuttonExitedAttendanceMiddle" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Delete" textFill="WHITE" AnchorPane.bottomAnchor="294.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="176.0" AnchorPane.topAnchor="400.0" />
+                  <Button fx:id="clear_button_attendance_middle_dateplusemployee" layoutX="521.0" layoutY="400.0" mnemonicParsing="false" onAction="#ClearButtonDatePlusEmployeeButtonClickedListenerAttendanceMiddle" onMouseEntered="#ClearDateplusEmployeebuttonEnteredAttendanceMiddle" onMouseExited="#ClearDatePlusEmployeebuttonExitedAttendanceMiddle" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="294.0" AnchorPane.leftAnchor="521.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="400.0" />
+                  <TextField fx:id="search_by_employee_name_text_attendance_middle" layoutX="129.0" layoutY="102.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onInputMethodTextChanged="#FillEmployeeListKeyPressedEventListenerAttendanceMiddle" onKeyPressed="#FillEmployeeListKeyPressedEventListenerAttendanceMiddle" onKeyReleased="#FillEmployeeListKeyPressedEventListenerAttendanceMiddle" onKeyTyped="#FillEmployeeListKeyPressedEventListenerAttendanceMiddle" prefHeight="25.0" prefWidth="199.0" promptText="Search By Employee Name" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="592.0" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="355.0" AnchorPane.topAnchor="102.0" />
+                  <Label layoutX="32.0" layoutY="442.0" prefHeight="17.0" prefWidth="61.0" text="Search By : " AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="590.0" AnchorPane.topAnchor="442.0" />
+                  <TextField fx:id="dateplusemployeeid_text_attendance_middle" editable="false" layoutX="178.0" layoutY="400.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onInputMethodTextChanged="#searchByBookTitleMiddleBLiTKeyPressedEventListener" onKeyPressed="#searchByBookTitleMiddleBLiTKeyPressedEventListener" onKeyReleased="#searchByBookTitleMiddleBLiTKeyPressedEventListener" onKeyTyped="#searchByBookTitleMiddleBLiTKeyPressedEventListener" prefHeight="25.0" prefWidth="199.0" promptText="Click the Record in the table" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="294.0" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="306.0" AnchorPane.topAnchor="400.0" />
+                  <Label layoutX="32.0" layoutY="404.0" prefHeight="17.0" prefWidth="121.0" text="Date + Employee ID :" AnchorPane.bottomAnchor="298.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="530.0" AnchorPane.topAnchor="404.0" />
+                  <Button fx:id="clear_button_attendance_middle_searchby" layoutX="404.0" layoutY="438.0" mnemonicParsing="false" onAction="#ClearButtonSearchByButtonClickedListenerAttendanceMiddle1" onMouseEntered="#ClearSearchBybuttonEnteredAttendanceMiddle" onMouseExited="#ClearSearchBybuttonExitedAttendanceMiddle" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="256.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="176.0" AnchorPane.topAnchor="438.0" />
+                  <Button fx:id="clear_button_attendance_middle" layoutX="353.0" layoutY="102.0" mnemonicParsing="false" onAction="#clearButtonSearhByButtonClickedListenerAttendanceMiddle" onMouseEntered="#ClearbuttonEnteredAttendanceMiddle" onMouseExited="#ClearbuttonExitedAttendanceMiddle" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="592.0" AnchorPane.leftAnchor="353.0" AnchorPane.rightAnchor="227.0" AnchorPane.topAnchor="102.0" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="employee_anchorpane_middle" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <TableView fx:id="employee_table_tableview_employee_middle" layoutX="11.0" layoutY="170.0" prefHeight="512.0" prefWidth="661.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="170.0">
+                    <columns>
+                      <TableColumn fx:id="id_tablecolumn_employee_table_employee_middle" prefWidth="77.0" text="ID" />
+                      <TableColumn fx:id="name_tablecolumn_employee_table_employee_middle" prefWidth="104.0" text="Name" />
+                        <TableColumn fx:id="contact_tablecolumn_tableview_employee_table_employee_middle" prefWidth="86.0" text="Contact No." />
+                        <TableColumn fx:id="email_tablecolumn_tableview_employee_table_employee_middle" prefWidth="82.0" text="Email" />
+                        <TableColumn fx:id="job_tablecolumn_tableview_employee_table_employee_middle" prefWidth="75.0" text="Job Title" />
+                        <TableColumn fx:id="department_tablecolumn_tableview_employee_table_employee_middle" prefWidth="75.0" text="Department" />
+                        <TableColumn fx:id="type_tablecolumn_tableview_employee_table_employee_middle" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="status_tablecolumn_tableview_employee_table_employee_middle" text="Status" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="11.0" layoutY="134.0" prefHeight="27.0" prefWidth="130.0" text="Employee Table" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="558.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="542.0" AnchorPane.topAnchor="134.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="162.0" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="103.0" text="Search By Name :" AnchorPane.bottomAnchor="564.0" AnchorPane.leftAnchor="162.0" AnchorPane.rightAnchor="418.0" AnchorPane.topAnchor="140.0">
+                     <font>
+                        <Font name="Nirmala UI" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="search_employee_name_textfield_employee_middle" layoutX="268.0" layoutY="135.0" onInputMethodTextChanged="#searchByEmployeeNameKeyPressedEventListenerEmployeeMiddle" onKeyPressed="#searchByEmployeeNameKeyPressedEventListenerEmployeeMiddle" onKeyReleased="#searchByEmployeeNameKeyPressedEventListenerEmployeeMiddle" onKeyTyped="#searchByEmployeeNameKeyPressedEventListenerEmployeeMiddle" prefHeight="25.0" prefWidth="199.0" promptText="Employee Name" style="-fx-background-radius: 2em;" AnchorPane.bottomAnchor="559.0" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="216.0" AnchorPane.topAnchor="135.0" />
+                  <Button fx:id="delete_button_employee_middle" layoutX="540.0" layoutY="98.0" mnemonicParsing="false" onAction="#DeleteButtonClickedListenerEmployeeMiddle" onMouseClicked="#deleteButtonClickedListener" onMouseEntered="#DeleteButtonEnteredEmployeeMiddle" onMouseExited="#DeleteButtonExitedEmployeeMiddle" prefHeight="15.0" prefWidth="55.0" style="-fx-background-color: #38baaa;" text="Delete" textFill="WHITE" AnchorPane.bottomAnchor="596.0" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="88.0" AnchorPane.topAnchor="98.0" />
+                  <Button fx:id="clear_button_employee_middle_search" layoutX="477.0" layoutY="135.0" mnemonicParsing="false" onAction="#ClearButtonMiddleSearchButtonClickedListenerEmployeeMiddle" onMouseClicked="#deleteButtonClickedListener" onMouseEntered="#ClearButtonEnteredEmployeeMiddleSearch" onMouseExited="#ClearButtonExitedEmployeeMiddleSearch" prefHeight="15.0" prefWidth="55.0" style="-fx-background-color: #38baaa;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="559.0" AnchorPane.leftAnchor="477.0" AnchorPane.rightAnchor="151.0" AnchorPane.topAnchor="135.0" />
+                  <TextField fx:id="employee_id_textfield_employee_middle" layoutX="268.0" layoutY="98.0" prefHeight="25.0" prefWidth="199.0" promptText="Employee ID" style="-fx-background-radius: 2em;" AnchorPane.bottomAnchor="596.0" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="216.0" AnchorPane.topAnchor="98.0" />
+                  <Button fx:id="clear_button_employee_middle_EID" layoutX="606.0" layoutY="98.0" mnemonicParsing="false" onAction="#ClearButtonMiddleEIDButtonClickedListenerEmployeeMiddle" onMouseClicked="#deleteButtonClickedListener" onMouseEntered="#ClearButtonEnteredEmployeeMiddleEID" onMouseExited="#ClearButtonExitedEmployeeMiddleEID" prefHeight="15.0" prefWidth="55.0" style="-fx-background-color: #38baaa;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="596.0" AnchorPane.leftAnchor="606.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="98.0" />
+                  <Label layoutX="162.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="103.0" text="Employee ID :" AnchorPane.bottomAnchor="601.0" AnchorPane.leftAnchor="162.0" AnchorPane.rightAnchor="418.0" AnchorPane.topAnchor="103.0">
+                     <font>
+                        <Font name="Nirmala UI" size="12.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane fx:id="salary_anchorpane_middle" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="employee_salary_list_tableview_salary_middle" layoutX="14.0" layoutY="231.0" prefHeight="481.0" prefWidth="661.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="231.0">
+                    <columns>
+                      <TableColumn fx:id="id_tablecolumn_employee_salary_list_salary_middle" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="name_tablecolumn_employee_salary_list_salary_middle" prefWidth="118.0" text="Name" />
+                        <TableColumn fx:id="status_tablecolumn_employee_salary_list_salary_middle" prefWidth="96.0" text="Status" />
+                        <TableColumn fx:id="salary_tablecolumn_employee_salary_list_salary_middle" prefWidth="76.0" text="Salary" />
+                        <TableColumn fx:id="amount_to_be_given_tablecolumn_employee_salary_list_salary_middle" prefWidth="139.0" text="Amount to be Given" />
+                        <TableColumn fx:id="total_given_amount_tablecolumn_employee_salary_list_salary_middle" prefWidth="156.0" text="Total given amount" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="196.0" prefHeight="27.0" prefWidth="165.0" text="Employee Salary List" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="496.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="504.0" AnchorPane.topAnchor="196.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="126.0" layoutY="171.0" prefHeight="17.0" prefWidth="70.0" text="Search By : " AnchorPane.bottomAnchor="531.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="487.0" AnchorPane.topAnchor="171.0" />
+                  <TextField fx:id="search_by_employee_name_textfield_salary_middle" layoutX="205.0" layoutY="167.0" onInputMethodTextChanged="#SearchByEmployeeNameEmployeeSalaryTableFillKeyPressedEventListenerTextfieldSalaryMiddle" onKeyPressed="#SearchByEmployeeNameEmployeeSalaryTableFillKeyPressedEventListenerTextfieldSalaryMiddle" onKeyReleased="#SearchByEmployeeNameEmployeeSalaryTableFillKeyPressedEventListenerTextfieldSalaryMiddle" onKeyTyped="#SearchByEmployeeNameEmployeeSalaryTableFillKeyPressedEventListenerTextfieldSalaryMiddle" prefHeight="25.0" prefWidth="254.0" promptText="Employee Name" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="527.0" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="224.0" AnchorPane.topAnchor="167.0" />
+                  <Button fx:id="clear_button_salary_middle_searchby" layoutX="478.0" layoutY="167.0" mnemonicParsing="false" onAction="#ClearButtonSalaryMiddleSearchByButtonClickedListenerSalaryMiddle" onMouseEntered="#ClearButtonSearchBySalaryMiddlebuttonEnteredSalaryMiddle" onMouseExited="#ClearButtonSearchBySalaryMiddlebuttonExitedSalaryMiddle" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="527.0" AnchorPane.leftAnchor="478.0" AnchorPane.rightAnchor="113.0" AnchorPane.topAnchor="167.0" />
+                  <Button fx:id="add_corresponding_salary_for_payment_button_salary_middle" layoutX="205.0" layoutY="197.0" mnemonicParsing="false" onAction="#AddCorrespondingSalaryForPaymentButtonClickedListenerSalaryMiddle" onMouseEntered="#AddCorrespondingSalaryForPaymentSalaryMiddlebuttonEnteredSalaryMiddle" onMouseExited="#AddCorrespondingSalaryForPaymentSalaryMiddlebuttonExitedSalaryMiddle" prefHeight="25.0" prefWidth="254.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Add Corresponding Salary for Payment" textFill="WHITE" AnchorPane.bottomAnchor="497.0" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="224.0" AnchorPane.topAnchor="197.0" />
+                  <Label layoutX="299.0" prefHeight="27.0" prefWidth="70.0" text="Payment" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="692.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="314.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="204.0" layoutY="34.0" prefHeight="27.0" prefWidth="70.0" text="Employee ID" textFill="WHITE" AnchorPane.bottomAnchor="658.0" AnchorPane.leftAnchor="204.0" AnchorPane.rightAnchor="409.0" AnchorPane.topAnchor="34.0" />
+                  <TextField fx:id="employee_id_textfield_payment_salary_middle" layoutX="271.0" layoutY="35.0" prefHeight="25.0" prefWidth="212.0" promptText="Employee ID" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="659.0" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="35.0" />
+                  <Label layoutX="204.0" layoutY="65.0" prefHeight="27.0" prefWidth="97.0" text="Provided Amount" textFill="WHITE" AnchorPane.bottomAnchor="627.0" AnchorPane.leftAnchor="204.0" AnchorPane.rightAnchor="382.0" AnchorPane.topAnchor="65.0" />
+                  <TextField fx:id="pay_textfield_payment_salary_middle" layoutX="302.0" layoutY="66.0" prefHeight="25.0" prefWidth="181.0" promptText="Pay" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="628.0" AnchorPane.leftAnchor="302.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="66.0" />
+                  <Button fx:id="clear_button_payment_salary_middle_payment" layoutX="347.0" layoutY="100.0" mnemonicParsing="false" onAction="#ClearButtonPaymentSalaryMiddleButtonClickedListenerSalaryMiddle" onMouseEntered="#ClearButtonPaymentSalaryMiddlebuttonEnteredSalaryMiddle" onMouseExited="#ClearButtonPaymentSalaryMiddlebuttonExitedSalaryMiddle" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="594.0" AnchorPane.leftAnchor="347.0" AnchorPane.rightAnchor="244.0" AnchorPane.topAnchor="100.0" />
+                  <Button fx:id="pay_button_payment_salary_middle" layoutX="225.0" layoutY="100.0" mnemonicParsing="false" onAction="#PayButtonPaymentSalaryMiddleButtonClickedListenerSalaryMiddle" onMouseEntered="#PayButtonPayementSalaryMiddlebuttonEnteredSalaryMiddle" onMouseExited="#PayButtonPaymentSalaryMiddlebuttonExitedSalaryMiddle" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Pay" textFill="WHITE" AnchorPane.bottomAnchor="594.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="366.0" AnchorPane.topAnchor="100.0" />
+               </children></AnchorPane>
+         </children>
+      </StackPane>
+      <StackPane layoutX="985.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="719.0" prefWidth="315.0" style="-fx-background-color: #257468;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="985.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="status_anchorpane_right" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <TextField fx:id="employee_id_textfield_status_right" layoutX="101.0" layoutY="78.0" prefHeight="25.0" prefWidth="187.0" promptText="Employee ID" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="616.0" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="78.0" />
+                  <Label layoutX="25.0" layoutY="77.0" prefHeight="27.0" prefWidth="70.0" text="Employee ID" textFill="WHITE" AnchorPane.bottomAnchor="615.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="77.0" />
+                  <Button fx:id="terminate_button_status_right" layoutX="37.0" layoutY="381.0" mnemonicParsing="false" onAction="#terminateButtonStatusRightButtonClickedListenerStatusRight" onMouseEntered="#terminatebuttonEnteredStatusRight" onMouseExited="#terminatebuttonExitedStatusRight" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Terminate" textFill="WHITE" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="381.0" />
+                  <Label layoutX="67.0" layoutY="7.0" prefHeight="27.0" prefWidth="187.0" text="Employee Termination" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="685.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="7.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="year_choose_status_right" layoutX="23.0" layoutY="137.0" prefHeight="25.0" prefWidth="86.0" AnchorPane.bottomAnchor="557.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="137.0" />
+                  <Label layoutX="113.0" layoutY="140.0" prefHeight="18.0" prefWidth="36.0" text="Month" textFill="WHITE" AnchorPane.bottomAnchor="561.0" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="166.0" AnchorPane.topAnchor="140.0" />
+                  <ComboBox fx:id="month_choose_status_right" layoutX="149.0" layoutY="136.0" prefHeight="25.0" prefWidth="61.0" AnchorPane.bottomAnchor="558.0" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="136.0" />
+                  <Label layoutX="212.0" layoutY="140.0" prefHeight="18.0" prefWidth="23.0" text="Day" textFill="WHITE" AnchorPane.bottomAnchor="561.0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="140.0" />
+                  <ComboBox fx:id="day_choose_status_right" layoutX="235.0" layoutY="136.0" prefHeight="25.0" prefWidth="58.0" AnchorPane.bottomAnchor="558.0" AnchorPane.leftAnchor="235.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="136.0" />
+                  <Label layoutX="23.0" layoutY="112.0" text="Termination Date" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="590.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="112.0" />
+                  <Button fx:id="clear_button_status_right" layoutX="172.0" layoutY="381.0" mnemonicParsing="false" onAction="#clearButtonStatusRightButtonClickedListenerStatusRight" onMouseEntered="#clearbuttonEnteredStatusRight" onMouseExited="#clearbuttonExitedStatusRight" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="381.0" />
+                  <Label layoutX="21.0" layoutY="171.0" text="Termination Reason" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="531.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="188.0" AnchorPane.topAnchor="171.0" />
+                  <TextArea fx:id="termination_reason_textarea_status_right" layoutX="16.0" layoutY="194.0" prefHeight="174.0" prefWidth="284.0" AnchorPane.bottomAnchor="351.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="194.0" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="attendance_anchorpane_right" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label layoutX="79.0" layoutY="8.0" prefHeight="27.0" prefWidth="165.0" text="Attendance Procced" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="684.0" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="71.0" AnchorPane.topAnchor="8.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="attendance_year_choose_attendance_right" layoutX="26.0" layoutY="73.0" prefHeight="25.0" prefWidth="86.0" AnchorPane.bottomAnchor="621.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="203.0" AnchorPane.topAnchor="73.0" />
+                  <Label layoutX="112.0" layoutY="76.0" prefHeight="18.0" prefWidth="36.0" text="Month" textFill="WHITE" AnchorPane.bottomAnchor="625.0" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="167.0" AnchorPane.topAnchor="76.0" />
+                  <ComboBox fx:id="attendance_month_choose_attendance_right" layoutX="148.0" layoutY="72.0" prefHeight="25.0" prefWidth="61.0" AnchorPane.bottomAnchor="622.0" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="106.0" AnchorPane.topAnchor="72.0" />
+                  <Label layoutX="216.0" layoutY="75.0" prefHeight="18.0" prefWidth="23.0" text="Day" textFill="WHITE" AnchorPane.bottomAnchor="626.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="76.0" AnchorPane.topAnchor="75.0" />
+                  <ComboBox fx:id="attendance_day_choose_attendance_right" layoutX="239.0" layoutY="71.0" prefHeight="25.0" prefWidth="58.0" AnchorPane.bottomAnchor="623.0" AnchorPane.leftAnchor="239.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="71.0" />
+                  <Label layoutX="17.0" layoutY="44.0" prefHeight="27.0" prefWidth="97.0" text="Attendance Date" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="648.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="201.0" AnchorPane.topAnchor="44.0" />
+                  <Label layoutX="14.0" layoutY="105.0" prefHeight="17.0" prefWidth="114.0" text="Present List (By ID) :" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="597.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="187.0" AnchorPane.topAnchor="105.0" />
+                  <TextArea fx:id="absent_list_textarea_attendance_right" layoutX="17.0" layoutY="122.0" prefHeight="200.0" prefWidth="284.0" promptText="List of Present ID by sperating with comma on each ID Eg. 02213da1,20121242, ....." AnchorPane.bottomAnchor="397.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="122.0" />
+                  <Button fx:id="procced_button_attendance_right" layoutX="35.0" layoutY="335.0" mnemonicParsing="false" onAction="#proceedButtonClickedListenerAttendanceRight" onMouseEntered="#ProccedbuttonEnteredAttendanceRight" onMouseExited="#ProccedbuttonExitedAttendanceRight" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Procced" textFill="WHITE" AnchorPane.bottomAnchor="359.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="191.0" AnchorPane.topAnchor="335.0" />
+                  <Button fx:id="clear_button_attendance_right" layoutX="172.0" layoutY="335.0" mnemonicParsing="false" onAction="#clearButtonClickedListenerAttendanceRight" onMouseEntered="#ClearbuttonEnteredAttendanceRight" onMouseExited="#ClearbuttonExitedAttendanceRight" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="359.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="335.0" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="employee_anchorpane_right" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label layoutX="67.0" layoutY="1.0" prefHeight="27.0" prefWidth="178.0" text="Employee Information" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="692.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="28.0" prefHeight="27.0" prefWidth="58.0" text="First Name" textFill="WHITE" AnchorPane.bottomAnchor="665.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="28.0" />
+                  <TextField fx:id="first_name_textfield_employee_right" layoutX="86.0" layoutY="29.0" prefHeight="25.0" prefWidth="212.0" promptText="First Name" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="665.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="29.0" />
+                  <Label layoutX="14.0" layoutY="54.0" prefHeight="27.0" prefWidth="58.0" text="Last Name" textFill="WHITE" AnchorPane.bottomAnchor="638.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="54.0" />
+                  <TextField fx:id="last_name_textfield_employee_right" layoutX="86.0" layoutY="55.0" prefHeight="25.0" prefWidth="212.0" promptText="Last name" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="639.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="55.0" />
+                  <Label layoutX="16.0" layoutY="81.0" prefHeight="27.0" prefWidth="61.0" text="ID Number" textFill="WHITE" AnchorPane.bottomAnchor="611.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="238.0" AnchorPane.topAnchor="81.0" />
+                  <TextField fx:id="employee_id_no_textfield_employee_right" layoutX="88.0" layoutY="82.0" prefHeight="25.0" prefWidth="212.0" promptText="Employee ID No." style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="612.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="82.0" />
+                  <Label layoutX="16.0" layoutY="108.0" prefHeight="27.0" prefWidth="70.0" text="Contact No." textFill="WHITE" AnchorPane.bottomAnchor="584.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="229.0" AnchorPane.topAnchor="108.0" />
+                  <TextField fx:id="contact_no_textfield_employee_right" layoutX="88.0" layoutY="109.0" prefHeight="25.0" prefWidth="212.0" promptText="Contact No." style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="585.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="109.0" />
+                  <Label layoutX="16.0" layoutY="135.0" prefHeight="27.0" prefWidth="70.0" text="Email" textFill="WHITE" AnchorPane.bottomAnchor="557.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="229.0" AnchorPane.topAnchor="135.0" />
+                  <TextField fx:id="email_textfield_employee_right" layoutX="88.0" layoutY="136.0" prefHeight="25.0" prefWidth="212.0" promptText="Email" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="558.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="136.0" />
+                  <Label layoutX="13.0" layoutY="161.0" prefHeight="27.0" prefWidth="47.0" text="Job Title" textFill="WHITE" AnchorPane.bottomAnchor="531.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="255.0" AnchorPane.topAnchor="161.0" />
+                  <TextField fx:id="job_title_textfield_employee_right" layoutX="88.0" layoutY="162.0" prefHeight="25.0" prefWidth="212.0" promptText="Job Title" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="532.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="162.0" />
+                  <Label layoutX="16.0" layoutY="188.0" prefHeight="27.0" prefWidth="70.0" text="Department" textFill="WHITE" AnchorPane.bottomAnchor="504.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="229.0" AnchorPane.topAnchor="188.0" />
+                  <TextField fx:id="department_textfield_employee_right" layoutX="88.0" layoutY="189.0" prefHeight="25.0" prefWidth="212.0" promptText="Department" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="505.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="189.0" />
+                  <Label layoutX="16.0" layoutY="214.0" prefHeight="27.0" prefWidth="82.0" text="Employee Type" textFill="WHITE" AnchorPane.bottomAnchor="478.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="217.0" AnchorPane.topAnchor="214.0" />
+                  <ChoiceBox fx:id="employee_type_choose_employee_right" layoutX="98.0" layoutY="215.0" prefHeight="25.0" prefWidth="199.0" AnchorPane.bottomAnchor="479.0" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="215.0" />
+                  <ComboBox fx:id="start_date_year_employee_right" layoutX="16.0" layoutY="267.0" prefHeight="25.0" prefWidth="86.0" AnchorPane.bottomAnchor="427.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="213.0" AnchorPane.topAnchor="267.0" />
+                  <Label layoutX="112.0" layoutY="270.0" prefHeight="18.0" prefWidth="36.0" text="Month" textFill="WHITE" AnchorPane.bottomAnchor="431.0" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="167.0" AnchorPane.topAnchor="270.0" />
+                  <ComboBox fx:id="start_date_month_employee_right" layoutX="148.0" layoutY="267.0" prefHeight="25.0" prefWidth="61.0" />
+                  <Label layoutX="218.0" layoutY="270.0" prefHeight="18.0" prefWidth="23.0" text="Day" textFill="WHITE" AnchorPane.bottomAnchor="431.0" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="74.0" AnchorPane.topAnchor="270.0" />
+                  <ComboBox fx:id="start_date_day_employee_right" layoutX="241.0" layoutY="267.0" prefHeight="25.0" prefWidth="58.0" AnchorPane.bottomAnchor="427.0" AnchorPane.leftAnchor="241.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="267.0" />
+                  <Label layoutX="16.0" layoutY="241.0" prefHeight="18.0" prefWidth="58.0" text="Start Date" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="241.0" AnchorPane.topAnchor="241.0" />
+                  <Label layoutX="16.0" layoutY="300.0" prefHeight="27.0" prefWidth="97.0" text="Education Details" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="392.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="202.0" AnchorPane.topAnchor="300.0" />
+                  <TextArea fx:id="education_details_textarea_employee_right" layoutX="13.0" layoutY="327.0" prefHeight="117.0" prefWidth="297.0" AnchorPane.bottomAnchor="275.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="327.0" />
+                  <Label layoutX="16.0" layoutY="444.0" prefHeight="27.0" prefWidth="97.0" text="Work History" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="248.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="202.0" AnchorPane.topAnchor="444.0" />
+                  <TextArea fx:id="work_history_textarea_employee_right" layoutX="13.0" layoutY="471.0" prefHeight="117.0" prefWidth="297.0" AnchorPane.bottomAnchor="131.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="471.0" />
+                  <Button fx:id="clear_button_employee_right" layoutX="185.0" layoutY="652.0" mnemonicParsing="false" onAction="#ClearButtonClickedListenerEmployeeRight" onMouseEntered="#ClearbuttonEnteredEmployeeRight" onMouseExited="#ClearbuttonExitedEmployeeRight" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="652.0" />
+                  <Button fx:id="add_button_employee_right" layoutX="58.0" layoutY="652.0" mnemonicParsing="false" onAction="#AddButtonClickedListenerEmployeeRight" onMouseEntered="#AddbuttonEnteredEmployeeRight" onMouseExited="#AddbuttonExitedEmployeeRight" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="652.0" />
+                  <Label layoutX="16.0" layoutY="595.0" prefHeight="27.0" prefWidth="70.0" text="Salary" textFill="WHITE" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="229.0" AnchorPane.topAnchor="595.0" />
+                  <TextField fx:id="salary_per_month_textfield_employee_right" layoutX="88.0" layoutY="596.0" prefHeight="25.0" prefWidth="212.0" promptText="Salary Per Month" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="596.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="salary_anchorpane_right" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="36.0" prefHeight="27.0" prefWidth="70.0" text="Employee ID" textFill="WHITE" AnchorPane.bottomAnchor="660.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="231.0" AnchorPane.topAnchor="36.0" />
+                  <TextField fx:id="employee_id_textfield_salary_right" layoutX="84.0" layoutY="37.0" prefHeight="25.0" prefWidth="212.0" promptText="Employee ID" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="661.0" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="37.0" />
+                  <Label layoutX="115.0" layoutY="-4.0" prefHeight="27.0" prefWidth="86.0" text="Edit Salary" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="696.0" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="72.0" prefHeight="17.0" prefWidth="61.0" text="Salary" textFill="WHITE" AnchorPane.bottomAnchor="634.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="237.0" AnchorPane.topAnchor="72.0" />
+                  <TextField fx:id="salary_textfield_salary_right" layoutX="84.0" layoutY="68.0" prefHeight="25.0" prefWidth="212.0" promptText="Salary" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="630.0" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="68.0" />
+                  <Button fx:id="clear_button_salary_right" layoutX="183.0" layoutY="102.0" mnemonicParsing="false" onAction="#ClearButtonSalaryRightButtonClickedListenerSalaryRight" onMouseEntered="#ClearButtonSalaryRightbuttonEnteredSalaryRight" onMouseExited="#ClearButtonSalaryRightbuttonExitedSalaryRight" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="596.0" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="102.0" />
+                  <Button fx:id="edit_button_salary_right" layoutX="66.0" layoutY="102.0" mnemonicParsing="false" onAction="#EditButtonSalaryRightButtonClickedListenerSalaryRight" onMouseEntered="#EditButtonSalaryRightbuttonEnteredSalaryRight" onMouseExited="#EditButtonSalaryRightbuttonExitedSalaryRight" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Edit" textFill="WHITE" AnchorPane.bottomAnchor="596.0" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="102.0" />
+                  <Line endX="213.0" layoutX="101.0" layoutY="136.0" startX="-100.0" stroke="WHITE" AnchorPane.bottomAnchor="586.5" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="135.5" />
+                  <Label layoutX="84.0" layoutY="148.0" prefHeight="27.0" prefWidth="165.0" text="Add Certain Amount" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="548.0" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="148.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="187.0" prefHeight="27.0" prefWidth="70.0" text="Employee ID" textFill="WHITE" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="187.0" />
+                  <TextField fx:id="employee_id_textfield_salary_right_Add_Certain_amount" layoutX="86.0" layoutY="188.0" prefHeight="25.0" prefWidth="212.0" promptText="Employee ID" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="510.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="188.0" />
+                  <Label layoutX="19.0" layoutY="223.0" prefHeight="17.0" prefWidth="61.0" text="Amount" textFill="WHITE" AnchorPane.bottomAnchor="483.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="235.0" AnchorPane.topAnchor="223.0" />
+                  <TextField fx:id="amount_textfield_salary_right_add_certain_amount" layoutX="86.0" layoutY="219.0" prefHeight="25.0" prefWidth="212.0" promptText="Amount" style="-fx-background-radius: 3em;" AnchorPane.bottomAnchor="479.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="219.0" />
+                  <Button fx:id="clear_button_salary_right_add_certain_amount" layoutX="183.0" layoutY="256.0" mnemonicParsing="false" onAction="#ClearButtonSalaryRightAddCertainAmountButtonClickedListenerSalaryRight" onMouseEntered="#ClearButtonSalaryRightAddCertainAmountbuttonEnteredSalaryRight" onMouseExited="#ClearButtonSalaryRightAddCertainAmountbuttonExitedSalaryRight" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="442.0" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="256.0" />
+                  <Button fx:id="add_button_salary_right" layoutX="49.0" layoutY="256.0" mnemonicParsing="false" onAction="#AddButtonSalaryRightButtonClickedListenerSalaryRight" onMouseEntered="#AddButtonSalaryRightbuttonEnteredSalaryRight" onMouseExited="#AddButtonSalaryRightbuttonExitedSalaryRight" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #408080; -fx-background-radius: 2em;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="442.0" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="256.0" />
+               </children></AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

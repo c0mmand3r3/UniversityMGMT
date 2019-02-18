@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Top_back_view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universitydatabasemanagement.MainChooserController">
+   <children>
+      <AnchorPane fx:id="Top_back" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="783.0" style="-fx-background-color: #393c3e;">
+         <children>
+            <AnchorPane prefHeight="554.0" prefWidth="250.0" style="-fx-background-color: #3c3f41;">
+               <children>
+                  <JFXButton fx:id="campus_details_button" defaultButton="true" focusTraversable="false" layoutX="16.0" layoutY="102.0" onAction="#buttonMenuClicked" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #777777; -fx-background-radius: 3em;" text="Campus Details" textFill="#dfdfdf" />
+                  <JFXButton fx:id="project_management_button" focusTraversable="false" layoutX="16.0" layoutY="299.0" onAction="#buttonMenuClicked" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #777777; -fx-background-radius: 3em;" text="Program Management" textFill="#dfdfdf" />
+                  <JFXButton fx:id="course_management_button" focusTraversable="false" layoutX="14.0" layoutY="134.0" onAction="#buttonMenuClicked" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #777777; -fx-background-radius: 3em;" text="Course Management" textFill="#dfdfdf" />
+                  <JFXButton fx:id="admission_management_button" focusTraversable="false" layoutX="16.0" layoutY="70.0" onAction="#buttonMenuClicked" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #777777; -fx-background-radius: 3em;" text="Admission Management" textFill="#dfdfdf" />
+                  <JFXButton fx:id="student_info_system_button" focusTraversable="false" layoutX="16.0" layoutY="332.0" onAction="#buttonMenuClicked" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #777777; -fx-background-radius: 3em;" text="Student Information System" textFill="#dfdfdf" />
+                  <JFXButton fx:id="academic_registration_button" focusTraversable="false" layoutX="16.0" layoutY="37.0" onAction="#buttonMenuClicked" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #777777; -fx-background-radius: 3em;" text="Academic Registration" textFill="#dfdfdf" />
+                  <JFXButton fx:id="library_management_button" focusTraversable="false" layoutX="14.0" layoutY="265.0" onAction="#buttonMenuClicked" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #777777; -fx-background-radius: 3em;" text="Library Management" textFill="#dfdfdf" />
+                  <JFXButton fx:id="fees_management_button" focusTraversable="false" layoutX="14.0" layoutY="165.0" onAction="#buttonMenuClicked" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #777777; -fx-background-radius: 3em;" text="Fees Management" textFill="#dfdfdf" />
+                  <JFXButton fx:id="human_resource_management_button" focusTraversable="false" layoutX="16.0" layoutY="233.0" onAction="#buttonMenuClicked" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #777777; -fx-background-radius: 3em;" text="Human Resource Management" textFill="#dfdfdf" />
+                  <JFXButton fx:id="hostel_management_button" focusTraversable="false" layoutX="14.0" layoutY="198.0" onAction="#buttonMenuClicked" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #777777; -fx-background-radius: 3em;" text="Hostel Management" textFill="#dfdfdf" />
+                  <JFXButton fx:id="logout_button" focusTraversable="false" layoutX="14.0" layoutY="508.0" onAction="#logoutButtonClickedListener" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: #9f6660; -fx-background-radius: 3em;" text="Log Out" textFill="#dfdfdf" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="23.0" prefWidth="781.0" style="-fx-background-color: #3c3f41;">
+               <effect>
+                  <DropShadow spread="0.65" />
+               </effect>
+               <children>
+                  <ImageView fx:id="close_imageview" fitHeight="21.0" fitWidth="27.0" layoutX="760.0" layoutY="1.0" onMouseClicked="#closeButtonImageEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/university_close.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="minimize_imageview" fitHeight="21.0" fitWidth="27.0" layoutX="732.0" layoutY="1.0" onMouseClicked="#closeButtonImageEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/uinversity_minimize.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label layoutX="7.0" layoutY="3.0" prefHeight="17.0" prefWidth="183.0" text="University Management System" textFill="#dfdfdf">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Pane fx:id="pane_wel" layoutX="263.0" layoutY="35.0" prefHeight="474.0" prefWidth="506.0">
+               <children>
+                  <Label fx:id="Multi_line_label" layoutX="17.0" layoutY="86.0" prefHeight="310.0" prefWidth="466.0" style="-fx-background-color: #3b3b3b;" textFill="WHITE" wrapText="true" />
+                  <Label fx:id="heading_label" layoutX="7.0" layoutY="21.0" prefHeight="43.0" prefWidth="466.0" text="Welcome!" textFill="#fcfcfc">
+                     <font>
+                        <Font name="SimSun-ExtB" size="23.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="go_button" focusTraversable="false" layoutX="405.0" layoutY="398.0" onAction="#AnchorPaneChoose" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #777777; -fx-background-radius: 3em;" text="Go" textFill="#dfdfdf" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

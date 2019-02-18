@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="1276.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universitydatabasemanagement.ProgramManagementSystemController">
+   <children>
+      <AnchorPane prefHeight="28.0" prefWidth="1276.0" style="-fx-background-color: #5b2441;" AnchorPane.bottomAnchor="573.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" text="Program Manager" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="1165.0" AnchorPane.topAnchor="6.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="29.0" prefHeight="573.0" prefWidth="223.0" style="-fx-background-color: #359aff;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1053.0" AnchorPane.topAnchor="29.0">
+         <children>
+            <Label layoutX="6.0" layoutY="44.0" prefHeight="17.0" prefWidth="65.0" text="Program ID" AnchorPane.bottomAnchor="512.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="152.0" AnchorPane.topAnchor="44.0" />
+            <TextField fx:id="program_id_text" layoutX="71.0" layoutY="41.0" prefHeight="25.0" prefWidth="142.0" promptText="  Program ID (Unique)" style="-fx-background-radius: 2em;" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="41.0" />
+            <Label layoutX="9.0" layoutY="78.0" prefHeight="17.0" prefWidth="30.0" text="Title" />
+            <TextField fx:id="title_text" layoutX="43.0" layoutY="74.0" prefHeight="17.0" prefWidth="174.0" promptText="Title" style="-fx-background-radius: 2em;" AnchorPane.bottomAnchor="476.0" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="74.0" />
+            <Button fx:id="add_button_program" layoutX="6.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#AddButtonClickedListener" onMouseEntered="#AddbuttonEntered" onMouseExited="#AddbuttonExited" prefHeight="25.0" prefWidth="65.0" style="-fx-background-radius: 2em; -fx-background-color: #620031;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="441.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="152.0" AnchorPane.topAnchor="109.0" />
+            <Button fx:id="clear_button_program" layoutX="142.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#ClearButtonClickedListener" onMouseEntered="#ClearbuttonEntered" onMouseExited="#ClearbuttonExited" prefHeight="25.0" prefWidth="65.0" style="-fx-background-radius: 2em; -fx-background-color: #620031;" text="Clear" textFill="WHITE" AnchorPane.bottomAnchor="441.0" AnchorPane.leftAnchor="142.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="109.0" />
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="76.0" text="Program ID" underline="true" AnchorPane.bottomAnchor="544.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="Elephant" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1053.0" layoutY="30.0" prefHeight="573.0" prefWidth="223.0" style="-fx-background-color: #359aff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1053.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+      <TableView fx:id="student_information_table" layoutX="234.0" layoutY="361.0" prefHeight="205.0" prefWidth="809.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="233.0" AnchorPane.topAnchor="361.0">
+        <columns>
+          <TableColumn fx:id="student_id_col" prefWidth="97.0" style="-fx-alignment: CENTER;" text="Student ID" />
+          <TableColumn fx:id="name_col" prefWidth="114.0" style="-fx-alignment: CENTER;" text="Name" />
+            <TableColumn fx:id="status_col" prefWidth="184.0" style="-fx-alignment: CENTER;" text="Program Selected" />
+            <TableColumn prefWidth="147.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="234.0" layoutY="73.0" prefHeight="17.0" prefWidth="133.0" text="Program Information" underline="true" AnchorPane.bottomAnchor="513.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="909.0" AnchorPane.topAnchor="73.0">
+         <font>
+            <Font name="Elephant" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="234.0" layoutY="332.0" prefHeight="17.0" prefWidth="133.0" text="Student Information" underline="true" AnchorPane.bottomAnchor="254.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="909.0" AnchorPane.topAnchor="332.0">
+         <font>
+            <Font name="Elephant" size="12.0" />
+         </font>
+      </Label>
+      <Pane fx:id="refresh_pane_program" layoutX="1018.0" layoutY="61.0" onMouseClicked="#EditRefresh" onMouseEntered="#RefreshbuttonEntered" onMouseExited="#RefreshbuttonExited" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #38baaa; -fx-background-radius: 1em;" AnchorPane.bottomAnchor="517.0" AnchorPane.leftAnchor="1018.0" AnchorPane.rightAnchor="233.0" AnchorPane.topAnchor="61.0">
+         <children>
+            <ImageView fx:id="refresh_image_program" fitHeight="25.0" fitWidth="23.0" layoutX="-1.0" layoutY="2.0" onMouseClicked="#EditRefresh" onMouseEntered="#RefreshbuttonEntered" onMouseExited="#RefreshbuttonExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../mainMenuImages/refresh_images.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="refresh_pane_student" layoutX="1018.0" layoutY="328.0" onMouseEntered="#RefreshbuttonEnteredStudent" onMouseExited="#RefreshbuttonExitedStudent" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #38baaa; -fx-background-radius: 1em;" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="1018.0" AnchorPane.rightAnchor="233.0" AnchorPane.topAnchor="328.0">
+         <children>
+            <ImageView fx:id="refresh_image_student" fitHeight="25.0" fitWidth="23.0" layoutX="-1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../mainMenuImages/refresh_images.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <TextField fx:id="program_id_text_search" layoutX="338.0" layoutY="36.0" prefHeight="25.0" prefWidth="167.0" promptText="Program ID" style="-fx-background-radius: 2em;" AnchorPane.bottomAnchor="542.0" AnchorPane.leftAnchor="338.0" AnchorPane.rightAnchor="771.0" AnchorPane.topAnchor="36.0" />
+      <Label layoutX="257.0" layoutY="40.0" prefHeight="17.0" prefWidth="76.0" text="Program ID :" AnchorPane.bottomAnchor="546.0" AnchorPane.leftAnchor="257.0" AnchorPane.rightAnchor="943.0" AnchorPane.topAnchor="40.0" />
+      <Button fx:id="edit_button" layoutX="525.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#EditButtonClickedListener" onMouseEntered="#EditbuttonEntered" onMouseExited="#EditbuttonExited" prefHeight="15.0" prefWidth="55.0" style="-fx-background-color: #38baaa;" text="Edit" textFill="WHITE" AnchorPane.bottomAnchor="542.0" AnchorPane.leftAnchor="525.0" AnchorPane.rightAnchor="696.0" AnchorPane.topAnchor="36.0" />
+      <Button fx:id="delete_button" layoutX="593.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#DeleteButtonClickedListener" onMouseEntered="#DeletebuttonEntered" onMouseExited="#DeletebuttonExited" prefHeight="15.0" prefWidth="55.0" style="-fx-background-color: #38baaa;" text="Delete" textFill="WHITE" AnchorPane.bottomAnchor="542.0" AnchorPane.leftAnchor="593.0" AnchorPane.rightAnchor="628.0" AnchorPane.topAnchor="36.0" />
+      <TableView fx:id="program_information_table" layoutX="238.0" layoutY="102.0" prefHeight="205.0" prefWidth="809.0">
+        <columns>
+          <TableColumn fx:id="program_id_col" prefWidth="239.0" style="-fx-alignment: CENTER;" text="Program ID" />
+          <TableColumn fx:id="program_title_col" prefWidth="569.0" style="-fx-alignment: CENTER;" text="Title" />
+        </columns>
+      </TableView>
+      <Button fx:id="clear_button_search" layoutX="660.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#clearButtonSearchClickedListener" onMouseEntered="#ClearSearchbuttonEntered" onMouseExited="#ClearSearchbuttonExited" prefHeight="15.0" prefWidth="55.0" style="-fx-background-color: #38baaa;" text="Clear" textFill="WHITE" />
+   </children>
+</AnchorPane>

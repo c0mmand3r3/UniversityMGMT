@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="451.0" prefWidth="635.0" style="-fx-background-color: #49b652;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universitydatabasemanagement.FirstLoadingBarFXMLController">
+   <children>
+      <ImageView fx:id="SlideSecond" fitHeight="461.0" fitWidth="644.0" layoutX="-3.0" opacity="0.0" pickOnBounds="true">
+         <image>
+            <Image url="@Images/load2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="SlideThird" fitHeight="461.0" fitWidth="644.0" layoutY="1.0" opacity="0.0" pickOnBounds="true">
+         <image>
+            <Image url="@Images/load3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="SlideFirst" fitHeight="462.0" fitWidth="649.0" layoutX="-6.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@Images/load1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="232.0" layoutY="203.0" prefHeight="55.0" prefWidth="174.0" text="Loading.." textFill="#eef2a6">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="WAIT" />
+   </cursor>
+   
+</AnchorPane>

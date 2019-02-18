@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="Process_anchor" prefHeight="204.0" prefWidth="451.0" style="-fx-background-color: #808080;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universitydatabasemanagement.ProcessingMessageLayoutController">
+   <children>
+      <JFXProgressBar fx:id="processing_bars" layoutX="27.0" layoutY="108.0" prefHeight="0.0" prefWidth="393.0" />
+      <Label fx:id="Message_pass" layoutX="27.0" layoutY="60.0" prefHeight="32.0" prefWidth="393.0" text="Processing ...." textFill="#fcfcfc">
+         <font>
+            <Font name="Maiandra GD" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="Okay_processing_bt" layoutX="161.0" layoutY="139.0" mnemonicParsing="false" onMouseClicked="#okayButtonClicked" opacity="0.01" prefHeight="28.0" prefWidth="130.0" style="-fx-background-color: #3e3e3e; -fx-background-radius: 2em;" text="Okay" textFill="#b9afaf">
+         <font>
+            <Font name="Copperplate Gothic Light" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

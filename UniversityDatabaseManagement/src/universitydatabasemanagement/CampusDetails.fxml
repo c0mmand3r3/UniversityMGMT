@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="Background_view" onMouseDragged="#MouseOnDragWithWindow" prefHeight="725.0" prefWidth="901.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universitydatabasemanagement.CampusDetailsController">
+   <children>
+      <AnchorPane prefHeight="593.0" prefWidth="284.0" style="-fx-background-color: #393582;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="609.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="105.0" fitWidth="86.0" layoutX="14.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../mainMenuImages/logo_college.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="107.0" layoutY="69.0" prefHeight="26.0" prefWidth="131.0" text="Campus Details" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="19.0" />
+               </font>
+            </Label>
+            <Line endX="20.0" layoutX="207.0" layoutY="95.0" startX="-100.0" stroke="#ebebeb" />
+            <Pane fx:id="go_back_image_pane" layoutX="6.0" layoutY="8.0" onMouseClicked="#actionEventOnEachPane" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="26.0" prefWidth="39.0">
+               <children>
+                  <ImageView fx:id="go_back_image_view" fitHeight="26.0" fitWidth="32.0" layoutX="7.0" onMouseClicked="#actionEventOnEachPane" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/back_images.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="Add_record_pane" layoutY="251.0" mnemonicParsing="false" onAction="#ChooseSidePane" onMouseEntered="#mouseEnteredRight" onMouseExited="#mouseExitedRight" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #4f49b4;" text="Add Record" textFill="#bcb2b2">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/add_file_image.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="update_record_pane" layoutY="307.0" mnemonicParsing="false" onAction="#ChooseSidePane" onMouseEntered="#mouseEnteredRight" onMouseExited="#mouseExitedRight" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #4f49b4;" text="Update Record" textFill="#bcb2b2">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/update_images.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="search_record_pane" layoutY="363.0" mnemonicParsing="false" onAction="#ChooseSidePane" onMouseEntered="#mouseEnteredRight" onMouseExited="#mouseExitedRight" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #4f49b4;" text="Search Record" textFill="#bcb2b2">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/Search_images.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="delete_record_pane" layoutY="419.0" mnemonicParsing="false" onAction="#ChooseSidePane" onMouseEntered="#mouseEnteredRight" onMouseExited="#mouseExitedRight" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #4f49b4;" text="Delete Record" textFill="#bcb2b2">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/Delete_images.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="show_record_pane" layoutY="475.0" mnemonicParsing="false" onAction="#ChooseSidePane" onMouseEntered="#mouseEnteredRight" onMouseExited="#mouseExitedRight" prefHeight="56.0" prefWidth="297.0" style="-fx-background-color: #4f49b4;" text="Show Record" textFill="#bcb2b2">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/show_images.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="minimize_image_pane" layoutX="805.0" layoutY="1.0" onMouseClicked="#actionEventOnEachPane" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="26.0" prefWidth="39.0">
+         <children>
+            <ImageView fx:id="minimize_image_view" fitHeight="26.0" fitWidth="32.0" layoutX="7.0" onMouseClicked="#actionEventOnEachPane" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../mainMenuImages/minus_images.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="296.0" layoutY="44.0" prefHeight="64.0" prefWidth="610.0" style="-fx-background-color: #d1d1d1;">
+         <children>
+            <Label layoutX="24.0" layoutY="14.0" prefHeight="33.0" prefWidth="239.0" text="Affiliated College Details" textFill="#5d7566">
+               <font>
+                  <Font name="Impact" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <StackPane layoutX="292.0" layoutY="108.0" prefHeight="619.0" prefWidth="609.0">
+         <children>
+            <AnchorPane fx:id="search_record_anchorpane" layoutX="10.0" layoutY="10.0" onMouseClicked="#ChooseSidePane" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="138.0" text="Search Record By:">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="83.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/black_university_images.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="590.0" layoutY="70.0" startX="20.0" stroke="#866f46" AnchorPane.bottomAnchor="548.5" AnchorPane.leftAnchor="19.5" AnchorPane.rightAnchor="18.5" AnchorPane.topAnchor="69.5" />
+                  <ComboBox fx:id="search_campus_choose_combo" layoutX="122.0" layoutY="40.0" prefHeight="26.0" prefWidth="365.0" promptText="         Choose Campus" style="-fx-background-color: #717171; -fx-background-radius: 3em;" />
+                  <Pane fx:id="search_button_pane_search" layoutX="490.0" layoutY="40.0" onMouseClicked="#searchButtonClickedListener" onMouseEntered="#searchbuttonEntered" onMouseExited="#searchbuttonExited" prefHeight="26.0" prefWidth="110.0" style="-fx-background-radius: 3em; -fx-background-color: #d1d1d1;">
+                     <children>
+                        <ImageView fx:id="search_image_search" fitHeight="25.0" fitWidth="25.0" layoutX="12.0" onMouseClicked="#searchButtonClickedListener" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/search_image.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="find_tag_label_search" layoutX="47.0" layoutY="4.0" onMouseClicked="#searchButtonClickedListener" prefHeight="18.0" prefWidth="50.0" text="Search">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/add_black_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="20.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/pincode_images.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="search_result_anchorpane" layoutX="14.0" layoutY="101.0" prefHeight="556.0" prefWidth="598.0">
+                     <children>
+                        <Line endX="20.0" endY="300.0" layoutY="65.0" startX="20.0" />
+                        <Label layoutX="37.0" layoutY="34.0" prefHeight="18.0" prefWidth="138.0" text="College Information" textFill="#312a6b">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="5.0" prefHeight="22.0" prefWidth="121.0" text="Search Results" textFill="#312a6b">
+                           <font>
+                              <Font name="Segoe UI" size="17.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="location_information_tableview" layoutX="48.0" layoutY="200.0" prefHeight="74.0" prefWidth="530.0">
+                           <columns>
+                              <TableColumn fx:id="full_address_column" prefWidth="192.0" text="Full Address" />
+                              <TableColumn fx:id="town_city_village_column" prefWidth="90.0" text="Town/City/Village Name" />
+                              <TableColumn fx:id="district_column" minWidth="0.0" prefWidth="96.0" text="District" />
+                              <TableColumn fx:id="state_column" maxWidth="243.0" prefWidth="59.0" text="State" />
+                              <TableColumn fx:id="country_column" prefWidth="92.0" text="Country" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="37.0" layoutY="182.0" prefHeight="18.0" prefWidth="147.0" text="Location Information" textFill="#312a6b">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="330.0" prefHeight="18.0" prefWidth="158.0" text="Additional Information" textFill="#312a6b">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="additional_information_tableview" layoutX="52.0" layoutY="348.0" prefHeight="74.0" prefWidth="530.0">
+                           <columns>
+                              <TableColumn fx:id="website_column" prefWidth="156.0" text="Website" />
+                              <TableColumn fx:id="contact_number_column" prefWidth="126.0" text="Contact Number" />
+                              <TableColumn fx:id="email_column" minWidth="0.0" prefWidth="164.0" text="E-mail Address" />
+                              <TableColumn fx:id="postbox_column" maxWidth="243.0" prefWidth="82.0" text="Post-Box" />
+                           </columns>
+                        </TableView>
+                        <Line endX="47.0" layoutX="1.0" layoutY="65.0" startX="20.0" />
+                        <Line endX="47.0" layoutX="1.0" layoutY="212.0" startX="20.0" />
+                        <Line endX="50.0" layoutX="1.0" layoutY="365.0" startX="20.0" />
+                        <Pane fx:id="okay_pane_search" layoutX="248.0" layoutY="468.0" onMouseClicked="#hideButtonClickedListener" onMouseEntered="#findOkaybuttonEntered" onMouseExited="#findOkaybuttonExited" prefHeight="26.0" prefWidth="93.0" style="-fx-background-radius: 3em; -fx-background-color: #d1d1d1;">
+                           <children>
+                              <ImageView fx:id="search_okay_image_pane" fitHeight="25.0" fitWidth="25.0" layoutX="12.0" onMouseClicked="#hideButtonClickedListener" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../mainMenuImages/okay_images.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="search_okay_label_pane" layoutX="47.0" layoutY="4.0" onMouseClicked="#hideButtonClickedListener" prefHeight="18.0" prefWidth="39.0" text="Hide">
+                                 <font>
+                                    <Font name="Segoe UI Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <TableView fx:id="college_information_tableview" layoutX="49.0" layoutY="52.0" prefHeight="74.0" prefWidth="530.0">
+                          <columns>
+                            <TableColumn fx:id="campus_id_column" prefWidth="75.0" text="College ID" />
+                            <TableColumn fx:id="college_name_column" prefWidth="282.0" text="College Name" />
+                              <TableColumn fx:id="college_type_column" minWidth="8.0" prefWidth="172.0" text="College Type" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="delete_record_anchorpane" layoutX="10.0" layoutY="10.0" onMouseClicked="#ChooseSidePane" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="138.0" text="Delete Record By:">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="83.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/black_university_images.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="590.0" layoutY="70.0" startX="20.0" stroke="#866f46" AnchorPane.bottomAnchor="548.5" AnchorPane.leftAnchor="19.5" AnchorPane.rightAnchor="18.5" AnchorPane.topAnchor="69.5" />
+                  <ComboBox fx:id="delete_campus_choose_combo_ComboBox" layoutX="122.0" layoutY="40.0" prefHeight="26.0" prefWidth="365.0" promptText="         Choose Campus" style="-fx-background-color: #717171; -fx-background-radius: 3em;" />
+                  <Pane fx:id="delete_button_pane" layoutX="490.0" layoutY="40.0" onMouseClicked="#deleteButtonClickedListener" onMouseEntered="#deletebuttonEntered" onMouseExited="#deletebuttonExited" prefHeight="26.0" prefWidth="110.0" style="-fx-background-radius: 3em; -fx-background-color: #d1d1d1;">
+                     <children>
+                        <ImageView fx:id="delete_image_imageView" fitHeight="25.0" fitWidth="25.0" layoutX="12.0" onMouseClicked="#searchButtonClickedListener" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/delete_image_black.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="delete_label_of_pane" layoutX="47.0" layoutY="4.0" onMouseClicked="#searchButtonClickedListener" prefHeight="18.0" prefWidth="50.0" text="Delete">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/add_black_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="20.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/pincode_images.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="delete_anchorpane_show" layoutX="33.0" layoutY="112.0" prefHeight="444.0" prefWidth="546.0">
+                     <children>
+                        <Label fx:id="delete_record_information_label" layoutX="16.0" layoutY="54.0" prefHeight="319.0" prefWidth="515.0" />
+                        <Label layoutX="23.0" layoutY="22.0" prefHeight="25.0" prefWidth="334.0" text="Do you want to delete this record?">
+                           <font>
+                              <Font name="Elephant" size="19.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="yes_button" layoutX="208.0" layoutY="379.0" mnemonicParsing="false" onMouseClicked="#yesButtonClickedOfDeleteRecordAnchorPane" onMouseEntered="#yesbuttonEntered" onMouseExited="#yesbuttonExited" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #717171; -fx-background-radius: 3em;" text="Proceed">
+                           <font>
+                              <Font name="Tahoma Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="show_record_anchorpane_show" prefHeight="633.0" prefWidth="574.0" visible="false">
+               <children>
+                  <Button fx:id="show_record_button_show" layoutX="183.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#showRecordButtonClickedListenerCampus" onMouseEntered="#showRecordButtonEntered" onMouseExited="#showRecordButtonExited" prefHeight="25.0" prefWidth="326.0" style="-fx-background-color: #808080; -fx-background-radius: 3em;" text="Show Record" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="add_record_anchorpane" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label layoutX="17.0" layoutY="9.0" prefHeight="17.0" prefWidth="138.0" text="College Information">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="campus_id_text" disable="true" editable="false" layoutX="121.0" layoutY="37.0" prefHeight="25.0" prefWidth="178.0" promptText="       Campus ID" style="-fx-background-color: #a2a2a2; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/pincode_images.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="campus_name_text" layoutX="121.0" layoutY="69.0" onKeyPressed="#checkwhileTypingEveryTextfieldCampusName" onKeyReleased="#checkwhileTypingEveryTextfieldCampusName" prefHeight="25.0" prefWidth="399.0" promptText="        Campus Name" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/black_university_images.png" />
+                     </image>
+                  </ImageView>
+                  <ChoiceBox fx:id="college_type_choice" layoutX="121.0" layoutY="101.0" prefHeight="25.0" prefWidth="259.0" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/list_images.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="17.0" layoutY="153.0" prefHeight="18.0" prefWidth="147.0" text="Location Information">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="full_address_text" layoutX="121.0" layoutY="183.0" onKeyPressed="#addressMatchKeyPressedReleasedListener" onKeyReleased="#addressMatchKeyPressedReleasedListener" prefHeight="25.0" prefWidth="303.0" promptText="        Full Address" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/address_images.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="town_name_text" layoutX="121.0" layoutY="216.0" onKeyPressed="#townVillageCityMatchKeyPressedReleasedListener" onKeyReleased="#townVillageCityMatchKeyPressedReleasedListener" prefHeight="25.0" prefWidth="268.0" promptText="        Town/Village/City Name" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/city_images.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="district_name_text" layoutX="121.0" layoutY="249.0" onKeyPressed="#DistrictMatchKeyPressedReleasedListener" onKeyReleased="#DistrictMatchKeyPressedReleasedListener" prefHeight="25.0" prefWidth="209.0" promptText="        District" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/district_images.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="state_name_text" layoutX="121.0" layoutY="283.0" onKeyPressed="#StateMatchKeyPressedReleasedListener" onKeyReleased="#StateMatchKeyPressedReleasedListener" prefHeight="25.0" prefWidth="246.0" promptText="        State" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/state_images.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="country_name_text" layoutX="121.0" layoutY="316.0" onKeyPressed="#CountryMatchKeyPressedReleasedListener" onKeyReleased="#CountryMatchKeyPressedReleasedListener" prefHeight="25.0" prefWidth="232.0" promptText="        Country" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/country_images.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="17.0" layoutY="361.0" prefHeight="18.0" prefWidth="168.0" text="Additional Information">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="website_name_text" layoutX="121.0" layoutY="387.0" onKeyPressed="#WebsiteMatchKeyPressedReleasedListener" onKeyReleased="#WebsiteMatchKeyPressedReleasedListener" prefHeight="25.0" prefWidth="303.0" promptText="        Website" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/website_images.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="contact_number_text" layoutX="121.0" layoutY="419.0" onKeyPressed="#ContactMatchKeyPressedReleasedListener" onKeyReleased="#ContactMatchKeyPressedReleasedListener" prefHeight="25.0" prefWidth="259.0" promptText="        Contact Number" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/contact_images.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="email_address_text" layoutX="121.0" layoutY="451.0" onKeyPressed="#EmailMatchKeyPressedReleasedListener" onKeyReleased="#EmailMatchKeyPressedReleasedListener" prefHeight="25.0" prefWidth="292.0" promptText="        E-mail Address" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/email_images.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="post_box_number_text" layoutX="121.0" layoutY="483.0" onKeyPressed="#PostBoxMatchKeyPressedReleasedListener" onKeyReleased="#PostBoxMatchKeyPressedReleasedListener" prefHeight="25.0" prefWidth="239.0" promptText="        Post-Box Number" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/postbox_images.png" />
+                     </image>
+                  </ImageView>
+                  <Pane fx:id="Add_record_pane_whole" layoutX="142.0" layoutY="517.0" onMouseClicked="#add_cancel_ButtonPaneCheck" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #d1d1d1; -fx-background-radius: 3em;">
+                     <children>
+                        <ImageView fx:id="add_image_click" fitHeight="26.0" fitWidth="34.0" layoutX="21.0" layoutY="8.0" onMouseClicked="#add_cancel_ButtonPaneCheck" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/add_file_image.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="add_label" layoutX="72.0" layoutY="8.0" onMouseClicked="#add_cancel_ButtonPaneCheck" prefHeight="26.0" prefWidth="39.0" text="Add" textFill="#fcfcfc">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="cancel_record_pane_whole" layoutX="329.0" layoutY="517.0" onMouseClicked="#add_cancel_ButtonPaneCheck" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #d1d1d1; -fx-background-radius: 3em;">
+                     <children>
+                        <ImageView fx:id="cancel_image_click" fitHeight="26.0" fitWidth="34.0" layoutX="21.0" layoutY="8.0" onMouseClicked="#add_cancel_ButtonPaneCheck" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/cancel_images.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="cancel_label" layoutX="72.0" layoutY="8.0" onMouseClicked="#add_cancel_ButtonPaneCheck" prefHeight="27.0" prefWidth="61.0" text="Cancel" textFill="#fcfcfc">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="correct_campus_name_image" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="527.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/correct_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="error_campus_name_image" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="527.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/error_image_side.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="correct_full_address_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="435.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/correct_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="correct_town_name_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="397.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/correct_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="correct_district_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="336.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/correct_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="correct_state_image" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="372.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/correct_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="correct_country_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="357.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/correct_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="correct_website_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="435.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/correct_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="correct_contact_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="389.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/correct_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="correct_email_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="427.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/correct_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="correct_postbox_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="372.0" layoutY="488.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/correct_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="error_full_address_image" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="438.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/error_image_side.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="error_town_name_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="397.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/error_image_side.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="error_district_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="336.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/error_image_side.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="error_state_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="372.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/error_image_side.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="error_country_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="359.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/error_image_side.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="error_website_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="39.0" layoutX="438.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/error_image_side.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="error_contact_image" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="389.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/error_image_side.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="error_email_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="430.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/error_image_side.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="error_postbox_images" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="372.0" layoutY="488.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../mainMenuImages/error_image_side.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="update_record_anchorpane" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="138.0" text="Update Record By:">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="83.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/black_university_images.png" />
+                     </image>
+                  </ImageView>
+                  <ComboBox fx:id="update_campus_choose_combo" layoutX="114.0" layoutY="41.0" prefHeight="25.0" prefWidth="368.0" promptText="         Choose Campus" style="-fx-background-color: #717171; -fx-background-radius: 3em;" AnchorPane.bottomAnchor="592.0" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="41.0" />
+                  <Line endX="590.0" layoutY="70.0" startX="20.0" stroke="#866f46" AnchorPane.bottomAnchor="548.5" AnchorPane.leftAnchor="19.5" AnchorPane.rightAnchor="18.5" AnchorPane.topAnchor="69.5" />
+                  <Pane fx:id="find_button_update" layoutX="490.0" layoutY="40.0" onMouseClicked="#FindButtonOfCollegeInformation" onMouseEntered="#findbuttonEntered" onMouseExited="#findbuttonExited" prefHeight="26.0" prefWidth="93.0" style="-fx-background-radius: 3em; -fx-background-color: #d1d1d1;">
+                     <children>
+                        <ImageView fx:id="search_image_update" fitHeight="25.0" fitWidth="25.0" layoutX="12.0" onMouseClicked="#FindButtonOfCollegeInformation" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/search_image.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="find_tag_label_update" layoutX="47.0" layoutY="4.0" onMouseClicked="#FindButtonOfCollegeInformation" prefHeight="18.0" prefWidth="39.0" text="Find">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/add_black_images.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="20.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../mainMenuImages/pincode_images.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="update_anchorpane" layoutX="13.0" layoutY="79.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="584.0">
+                     <children>
+                        <Label layoutX="17.0" layoutY="9.0" prefHeight="17.0" prefWidth="138.0" text="College Information">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="campus_id_text1" disable="true" editable="false" layoutX="121.0" layoutY="37.0" prefHeight="25.0" prefWidth="178.0" promptText="       Campus ID" style="-fx-background-color: #a2a2a2; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/pincode_images.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="campus_name_text1" layoutX="121.0" layoutY="69.0" onKeyPressed="#checkwhileTypingEveryTextfieldCampusName1" onKeyReleased="#checkwhileTypingEveryTextfieldCampusName1" prefHeight="25.0" prefWidth="399.0" promptText="        Campus Name" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/black_university_images.png" />
+                           </image>
+                        </ImageView>
+                        <ChoiceBox fx:id="college_type_choice1" layoutX="121.0" layoutY="101.0" prefHeight="25.0" prefWidth="259.0" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/list_images.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="full_address_text1" layoutX="121.0" layoutY="133.0" onKeyPressed="#addressMatchKeyPressedReleasedListener1" onKeyReleased="#addressMatchKeyPressedReleasedListener1" prefHeight="25.0" prefWidth="303.0" promptText="        Full Address" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/address_images.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="town_name_text1" layoutX="121.0" layoutY="166.0" onKeyPressed="#townVillageCityMatchKeyPressedReleasedListener1" onKeyReleased="#townVillageCityMatchKeyPressedReleasedListener1" prefHeight="25.0" prefWidth="268.0" promptText="        Town/Village/City Name" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/city_images.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="district_name_text1" layoutX="121.0" layoutY="199.0" onKeyPressed="#DistrictMatchKeyPressedReleasedListener1" onKeyReleased="#DistrictMatchKeyPressedReleasedListener1" prefHeight="25.0" prefWidth="209.0" promptText="        District" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/district_images.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="state_name_text1" layoutX="121.0" layoutY="233.0" onKeyPressed="#StateMatchKeyPressedReleasedListener1" onKeyReleased="#StateMatchKeyPressedReleasedListener1" prefHeight="25.0" prefWidth="246.0" promptText="        State" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/state_images.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="country_name_text1" layoutX="121.0" layoutY="266.0" onKeyPressed="#CountryMatchKeyPressedReleasedListener1" onKeyReleased="#CountryMatchKeyPressedReleasedListener1" prefHeight="25.0" prefWidth="232.0" promptText="        Country" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/country_images.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="website_name_text1" layoutX="121.0" layoutY="298.0" onKeyPressed="#WebsiteMatchKeyPressedReleasedListener1" onKeyReleased="#WebsiteMatchKeyPressedReleasedListener1" prefHeight="25.0" prefWidth="303.0" promptText="        Website" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/website_images.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="contact_number_text1" layoutX="121.0" layoutY="330.0" onKeyPressed="#ContactMatchKeyPressedReleasedListener1" onKeyReleased="#ContactMatchKeyPressedReleasedListener1" prefHeight="25.0" prefWidth="259.0" promptText="        Contact Number" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/contact_images.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="email_address_text1" layoutX="121.0" layoutY="362.0" onKeyPressed="#EmailMatchKeyPressedReleasedListener1" onKeyReleased="#EmailMatchKeyPressedReleasedListener1" prefHeight="25.0" prefWidth="292.0" promptText="        E-mail Address" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/email_images.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="post_box_number_text1" layoutX="121.0" layoutY="394.0" onKeyPressed="#PostBoxMatchKeyPressedReleasedListener1" onKeyReleased="#PostBoxMatchKeyPressedReleasedListener1" prefHeight="25.0" prefWidth="239.0" promptText="        Post-Box Number" style="-fx-background-color: #777777; -fx-background-radius: 2em; -fx-border-radius: 3em;" />
+                        <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="86.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../mainMenuImages/postbox_images.png" />
+                           </image>
+                        </ImageView>
+                        <Pane fx:id="Add_record_pane_whole1" layoutX="121.0" layoutY="431.0" onMouseClicked="#update_cancel_workClickedPane" onMouseEntered="#mouseEntered1" onMouseExited="#mouseExited1" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #d1d1d1#d1d1d1; -fx-background-radius: 3em;">
+                           <children>
+                              <ImageView fx:id="add_image_click1" fitHeight="26.0" fitWidth="34.0" layoutX="21.0" layoutY="8.0" onMouseClicked="#update_cancel_workClickedPane" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../mainMenuImages/update_images.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="add_label1" layoutX="72.0" layoutY="8.0" onMouseClicked="#update_cancel_workClickedPane" prefHeight="27.0" prefWidth="74.0" text="Update" textFill="#fcfcfc">
+                                 <font>
+                                    <Font name="Franklin Gothic Demi Cond" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="cancel_record_pane_whole1" layoutX="313.0" layoutY="431.0" onMouseClicked="#update_cancel_workClickedPane" onMouseEntered="#mouseEntered1" onMouseExited="#mouseExited1" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: #d1d1d1; -fx-background-radius: 3em;">
+                           <children>
+                              <ImageView fx:id="cancel_image_click1" fitHeight="26.0" fitWidth="34.0" layoutX="21.0" layoutY="8.0" onMouseClicked="#update_cancel_workClickedPane" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../mainMenuImages/cancel_images.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="cancel_label1" layoutX="72.0" layoutY="8.0" onMouseClicked="#update_cancel_workClickedPane" prefHeight="27.0" prefWidth="74.0" text="Cancel" textFill="#fcfcfc">
+                                 <font>
+                                    <Font name="Franklin Gothic Demi Cond" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fx:id="correct_campus_name_image1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="527.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/correct_images.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="error_campus_name_image1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="527.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/error_image_side.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="correct_full_address_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="435.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/correct_images.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="correct_town_name_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="397.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/correct_images.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="correct_district_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="336.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/correct_images.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="correct_state_image1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="372.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/correct_images.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="correct_country_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="357.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/correct_images.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="correct_website_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="435.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/correct_images.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="correct_contact_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="389.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/correct_images.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="correct_email_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="427.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/correct_images.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="correct_postbox_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="372.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/correct_images.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="error_full_address_image1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="435.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/error_image_side.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="error_town_name_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="397.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/error_image_side.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="error_district_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="336.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/error_image_side.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="error_state_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="373.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/error_image_side.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="error_country_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="357.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/error_image_side.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="error_website_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="39.0" layoutX="435.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/error_image_side.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="error_contact_image1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="389.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/error_image_side.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="error_email_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="427.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/error_image_side.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="error_postbox_images1" accessibleHelp="Login" accessibleText="Login" fitHeight="16.0" fitWidth="20.0" layoutX="373.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../mainMenuImages/error_image_side.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
